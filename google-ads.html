@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Ads à Lyon — Kortado</title>
+<meta name="description" content="Campagnes Google Ads pilotées par Robin : audit, création, optimisation chaque mois et rapport clair. Dès 200 €/mois de gestion.">
+<meta property="og:title" content="Google Ads à Lyon — Kortado">
+<meta property="og:description" content="Campagnes Google Ads pilotées par Robin : audit, création, optimisation chaque mois et rapport clair. Dès 200 €/mois de gestion.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,800&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=Gochi+Hand&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1E2A44}a:hover{color:#1E2A44}
+.mono{font-family:'IBM Plex Mono',monospace}
+.lab{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.frame{max-width:1360px;margin:0 auto;border-left:2px solid #1E2A44;border-right:2px solid #1E2A44;box-sizing:border-box}
+.row{border-bottom:2px solid #1E2A44}
+.cell{border-right:2px solid #1E2A44;box-sizing:border-box}
+.cell:last-child{border-right:0}
+.pad{padding:88px 40px 48px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border:2px solid #1E2A44;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:800;text-decoration:none;box-shadow:3px 3px 0 #1E2A44;transition:transform .12s ease,box-shadow .12s ease;box-sizing:border-box;cursor:pointer}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 #1E2A44}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 #1E2A44}
+.btn:focus-visible,.porte2:focus-visible,summary:focus-visible,.play:focus-visible,.nl:focus-visible{outline:3px solid #2F6FD6;outline-offset:4px}
+.b-a{background:#FFB000;color:#1E2A44}.b-w{background:#FFFFFF;color:#1E2A44}.b-n{background:#1E2A44;color:#FFFFFF;box-shadow:3px 3px 0 #FFB000}.b-n:hover{box-shadow:4px 4px 0 #FFB000;color:#FFFFFF}
+.card{background:#FFFFFF;border:2px solid #1E2A44;border-radius:18px;box-shadow:4px 4px 0 #1E2A44;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 #1E2A44}
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:5px 10px;border:2px solid #1E2A44;border-radius:999px;background:#FFFFFF}
+.giant{font-weight:800;letter-spacing:-0.055em;line-height:.92;margin:0}
+.outline{color:transparent;-webkit-text-stroke:2px #FFB000}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker2{display:flex;width:max-content;animation:tick 34s linear infinite reverse}
+@keyframes wink{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(5deg)}}
+.cup{animation:wink 3.6s ease-in-out infinite;transform-origin:50% 80%}
+@keyframes pop{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.p1{animation:pop .7s cubic-bezier(.2,1.2,.4,1) both}.p2{animation:pop .7s cubic-bezier(.2,1.2,.4,1) .1s both}.p3{animation:pop .7s cubic-bezier(.2,1.2,.4,1) .2s both}
+.nav{display:flex;gap:2px;padding:5px;border:2px solid #1E2A44;border-radius:999px;background:#FFFFFF;box-shadow:3px 3px 0 #1E2A44;font-size:14px;font-weight:700}
+.nl{color:#1E2A44;text-decoration:none;padding:9px 16px;border-radius:999px;white-space:nowrap;transition:background-color .15s ease}
+.nl:hover{background:#D6E8FF}
+.porte2{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:300px;padding:22px;text-decoration:none;box-sizing:border-box;color:#1E2A44}
+.porte2:hover{color:#1E2A44}
+.porte2 .ph{position:absolute;top:22px;right:22px;width:96px;height:96px;border-radius:50%;overflow:hidden;border:2px solid #1E2A44;box-shadow:3px 3px 0 #1E2A44;background:#FFFFFF}
+.porte2 .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.porte2 .play{font-size:20px;font-weight:800;transition:transform .15s ease}
+.porte2:hover .play{transform:rotate(-45deg)}
+.chip{display:inline-flex;align-items:center;gap:.25em;font-style:normal;padding:.02em .28em .06em;margin:0 .32em;border:2px solid #1E2A44;border-radius:.3em;box-shadow:2px 2px 0 #1E2A44;vertical-align:.06em;line-height:1}
+.chip .dot{width:.32em;height:.32em;border-radius:50%;border:2px solid #1E2A44;display:inline-block}
+@keyframes flo1{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-5px) rotate(-2deg)}}
+@keyframes flo2{0%,100%{transform:translateY(-3px) rotate(2deg)}50%{transform:translateY(3px) rotate(3deg)}}
+.flo1{transform:rotate(-3deg);animation:flo1 3.4s ease-in-out infinite}
+.flo2{transform:rotate(2deg);animation:flo2 3.9s ease-in-out -1.2s infinite}
+.chip.flo1,.chip.flo2{box-shadow:3px 3px 0 #1E2A44}
+.tilt{box-shadow:6px 6px 0 #1E2A44}
+.tilt:hover{box-shadow:8px 8px 0 #1E2A44}
+.tl{transform:rotate(-1deg)}.tl:hover{transform:rotate(-1deg) translate(-2px,-2px)}
+.tr{transform:rotate(1deg)}.tr:hover{transform:rotate(1deg) translate(-2px,-2px)}
+@media (prefers-reduced-motion: reduce){.flo1,.flo2{animation:none}}
+.mark{font-style:italic;padding:0 .06em;position:relative;z-index:0}
+.mark::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.3em;background:#FFB000;z-index:-1}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:center}
+.sim{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.rng{width:100%;height:44px;margin:0;accent-color:#1E2A44;cursor:pointer}
+.q{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 16px;border:2px solid #1E2A44;border-radius:14px;background:#FFFFFF}
+.qn{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;border:2px solid #1E2A44;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600}
+.yn{min-width:64px;min-height:44px;padding:0 14px;border:2px solid #1E2A44;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:800;cursor:pointer;box-shadow:2px 2px 0 #1E2A44;transition:transform .1s ease,box-shadow .1s ease}
+.yn:active{transform:translate(2px,2px);box-shadow:0 0 0 #1E2A44}
+.yn:focus-visible{outline:3px solid #2F6FD6;outline-offset:3px}
+.bar{height:16px;border:2px solid #1E2A44;border-radius:10px;background:#FFFFFF;overflow:hidden}
+.slb{border:2px solid #1E2A44;border-radius:14px;padding:14px 18px 6px;background:#FFFFFF}
+.val{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:start;padding:20px 22px;border-bottom:2px solid #1E2A44}
+.val:last-child{border-bottom:0}
+.vn{font-size:40px;font-weight:800;letter-spacing:-0.05em;line-height:1;color:transparent;-webkit-text-stroke:1.6px #1E2A44}
+.qa{border-bottom:2px solid #1E2A44}
+.qa:last-child{border-bottom:0}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;padding:26px 40px;font-size:20px;font-weight:800;letter-spacing:-0.02em;transition:background-color .2s ease}
+.qa summary:hover{background:#D6E8FF}
+.qa summary::-webkit-details-marker{display:none}
+.qa .pl{flex:none;display:inline-grid;place-items:center;width:40px;height:40px;border:2px solid #1E2A44;border-radius:50%;background:#FFB000;font-size:24px;line-height:1;box-shadow:2px 2px 0 #1E2A44;transition:transform .2s ease}
+.qa[open] .pl{transform:rotate(45deg)}
+.qa p{margin:0;padding:0 40px 28px;max-width:70ch;font-weight:500;color:#4A5670}
+.play{width:52px;height:52px;flex:none;border-radius:50%;border:2px solid #1E2A44;background:#FFB000;display:grid;place-items:center;cursor:pointer;box-shadow:2px 2px 0 #1E2A44}
+.inp{min-height:52px;border-radius:12px;border:2px solid #1E2A44;background:#FFFFFF;color:#1E2A44;padding:0 16px;font:inherit;font-size:16px;font-weight:600;box-sizing:border-box;flex:1 1 200px;min-width:0}
+.inp:focus-visible{outline:3px solid #2F6FD6;outline-offset:2px}
+.fl a{color:#FFFFFF;text-decoration:none;display:block;line-height:2.1;font-weight:600}
+.fl a:hover{color:#FFB000}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:1023px){.hero,.g2,.g3,.sim{grid-template-columns:minmax(0,1fr)}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.cell{border-right:0;border-bottom:2px solid #1E2A44}.cell:last-child{border-bottom:0}.navl{display:none !important}.pad{padding:64px 20px 36px}.qa summary{padding-left:20px;padding-right:20px}.qa p{padding:0 20px 24px}.q{grid-template-columns:minmax(0,1fr)}.qn{display:none}}
+@media (max-width:639px){.g4{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion: reduce){.ticker2,.cup,.p1,.p2,.p3{animation:none}.btn,.card{transition:none}}
+.kick{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
+.kick b{color:#FFB000;font-weight:800}
+.disp{font-family:'Bricolage Grotesque','Plus Jakarta Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-0.025em;line-height:.95}
+.hl{background:linear-gradient(transparent 14%,#FFE29A 14%,#FFE29A 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .06em}
+.hlb{background:linear-gradient(transparent 14%,#FFFFFF 14%,#FFFFFF 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .06em}
+.spark{width:28px;height:28px;display:inline-block;flex:none}
+.stk{position:absolute;z-index:1;pointer-events:none}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-8px) rotate(var(--r,0deg))}}
+.bob{animation:bob 4.2s ease-in-out infinite;transform:rotate(var(--r,0deg))}
+.sph{display:block;border-radius:50%;overflow:hidden;border:3px solid #1E2A44;box-shadow:4px 4px 0 #1E2A44;background:#FFFFFF}
+.sph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.live{width:9px;height:9px;border-radius:50%;background:#FFB000;border:2px solid #1E2A44;flex:none}
+.pill{border-radius:999px}
+.tape{position:absolute;width:96px;height:28px;background:rgba(255,226,154,.85);border:2px solid #1E2A44;z-index:2}
+.badge{position:absolute;z-index:3;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:8px 14px;border:2px solid #1E2A44;border-radius:999px;background:#FFB000;box-shadow:3px 3px 0 #1E2A44}
+.addp{border:2px dashed #1E2A44;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-decoration:none;color:#1E2A44;text-align:center;transition:background-color .2s ease}
+.addp:hover{background:#FFF3D1;color:#1E2A44}
+.sw{position:relative;width:340px;max-width:100%;height:140px;border-radius:999px;border:3px solid #1E2A44;cursor:pointer;box-shadow:6px 6px 0 #1E2A44;transition:background-color .3s ease;padding:0}
+.knob{position:absolute;top:7px;width:120px;height:120px;border-radius:50%;background:#FFFFFF;border:3px solid #1E2A44;display:grid;place-items:center;transition:left .35s cubic-bezier(.2,1.3,.4,1)}
+@media (max-width:1023px){.stk,.tape{display:none}}
+@media (prefers-reduced-motion: reduce){.bob{animation:none}.knob{transition:none}}
+main>section,main>nav,footer,.sim>.cell{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.16 0 0 0 0 0.27 1.12 0 0 0 -0.665'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") !important;background-size:220px !important}
+.frame{border-left:0;border-right:0}.row{border-bottom:0}
+.sim>.cell,.g2>.cell{border-right:0;border-bottom:0}
+#resultats .g4{gap:24px;padding:0 40px 96px}
+#resultats .g4 .cell{border:2px solid #1E2A44;border-radius:18px;box-shadow:4px 4px 0 #1E2A44}
+#resultats .g4 .cell:nth-child(odd){transform:rotate(-1deg)}#resultats .g4 .cell:nth-child(even){transform:rotate(1deg)}
+#resultats .g4 .addp{border-style:dashed}
+@media (max-width:1023px){#resultats .g4{padding:0 20px 64px}}
+
+html{scroll-behavior:smooth}
+.shw{position:relative}
+.shw+section{margin-top:0}
+.tabs{z-index:2;position:absolute;left:0;right:0;top:-62px;height:64px;max-width:1440px;margin:0 auto;display:flex;align-items:flex-end;gap:6px;box-sizing:border-box}
+.sheet{position:relative;z-index:1;border-top:2px solid #1E2A44;padding-bottom:64px;scroll-margin-top:150px;overflow:hidden}
+.tab{position:relative;flex:none;height:64px;padding:0 24px;display:flex;align-items:center;gap:10px;border:2px solid #1E2A44;border-bottom:0;border-radius:18px 18px 0 0;font-size:20px;white-space:nowrap;text-decoration:none;box-sizing:border-box}
+.tab .tn{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.04em;opacity:.7}
+.tab.front{z-index:3}
+.tabs>.tab:first-child{border-left:0;border-top-left-radius:0;padding-left:28px}
+.tab.back{z-index:2;height:54px;margin-bottom:2px;cursor:pointer;transition:transform .18s cubic-bezier(.2,1.3,.4,1),filter .18s ease;filter:brightness(.96)}
+.tab.back:hover{transform:translateY(-10px);filter:none}
+.tab.back:focus-visible{outline:3px solid #2F6FD6;outline-offset:3px}
+.tab .ar{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;transition:transform .18s ease}
+.tab.back:hover .ar{transform:translateY(2px)}
+.tabtr{transition:background-color .2s ease,transform .18s cubic-bezier(.2,1.3,.4,1)}
+#portes .frame{padding-top:56px !important}
+#score .frame.sim,#inaction .frame.sim{max-width:none}
+#score.sheet,#inaction.sheet,#pied.sheet{padding-bottom:0}
+#score .sim>.cell,#inaction .sim>.cell{padding-bottom:136px !important}
+#pied .frame{padding-top:64px !important}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.tab.back{transition:none}}
+@media (max-width:1023px){.tab{font-size:15px;padding:0 14px}.tab .tn{display:none}}
+
+main>section,.sheet,.sim>.cell{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.16 0 0 0 0 0.27 1.12 0 0 0 -0.665'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") !important;background-size:220px !important}
+#resultats .g4{align-items:start}#resultats .g4 .cell{aspect-ratio:1/1;min-height:0;overflow:hidden;padding:24px 24px 16px !important}#resultats .g4 .cell>span[style*="clamp(52px"]{margin-top:auto !important;font-size:clamp(44px,4.2vw,64px) !important}#resultats .g4 .cell>a{margin-top:12px !important;padding-top:8px !important;min-height:36px !important}
+/* Test onglets simples : 1 onglet par section, collé à gauche, sans numéros ni flèches */
+.tabs{max-width:none !important;padding-left:0 !important;margin:0 !important}.tab.back{display:none !important}.tab .tn,.tab .ar{display:none !important}.tab.front{border-left:0 !important;border-top-left-radius:0 !important;padding-left:40px !important;margin-left:0 !important}
+@media (max-width:1023px){.tab.front{padding-left:20px !important;padding-right:18px !important;font-size:16px !important;height:54px !important}.tabs{top:-52px !important;height:54px !important}}
+
+/* V3 : onglet collant + pastilles de navigation + header 2 */
+html{zoom:.85}
+/* Titre du header agrandi */
+section[aria-labelledby="hero-h"] .frame{max-width:1600px !important}
+.tt{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.055em;line-height:1.02;font-size:clamp(44px,6vw,96px);max-width:1280px;text-wrap:balance}
+.tchip{display:inline-block;vertical-align:middle;font-size:.52em;letter-spacing:-0.03em;line-height:1;padding:.22em .45em .28em;margin:0 .12em;border:2.5px solid #1E2A44;border-radius:14px;box-shadow:4px 4px 0 #1E2A44;position:relative;top:-.06em}
+/* Espacements réduits : agence, témoignages, rendez-vous */
+#equipe .frame,#temoignages .frame,#rdv .frame{padding-top:44px !important;padding-bottom:36px !important}
+#temoignages .frame{padding-top:80px !important}
+#temoignages .g3{margin-top:36px !important}#temoignages .frame>div:last-child{margin-top:32px !important}
+.tabs{position:relative !important;top:auto !important;margin-top:-62px !important;left:auto !important;right:auto !important;z-index:15 !important;pointer-events:none}
+.tabs .tab{pointer-events:auto}
+.tab.front{margin-bottom:-4px !important;height:68px !important;padding-bottom:4px !important}
+@media (max-width:1023px){.tab.front{height:58px !important}}
+body{timeline-scope:--s1,--s2,--s3,--s4,--s5,--s6,--s7,--s8,--s9}
+#portes{view-timeline:--s1 block}#equipe{view-timeline:--s2 block}#temoignages{view-timeline:--s3 block}#resultats{view-timeline:--s4 block}#score{view-timeline:--s5 block}#inaction{view-timeline:--s6 block}#faq{view-timeline:--s7 block}#rdv{view-timeline:--s8 block}#pied{view-timeline:--s9 block}
+.dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:18;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.dots a{display:flex;align-items:center;justify-content:flex-end;gap:8px;text-decoration:none;color:#1E2A44;min-height:24px}
+.dots .dt{width:12px;height:12px;border-radius:50%;background:#FFFFFF;border:2px solid #1E2A44;flex:none;transition:transform .2s ease}
+.dots .lb{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:4px 0;box-shadow:2px 2px 0 #1E2A44;transition:max-width .25s ease,opacity .2s ease,padding .25s ease}
+.dots a:hover .lb,.dots a:focus-visible .lb{max-width:220px;opacity:1;padding:4px 12px}
+@keyframes lbOn{from,to{max-width:220px;opacity:1;padding:4px 12px}}
+@keyframes dtOn{from,to{background:#FFB000;transform:scale(1.35)}}
+.dots a:nth-child(1) .lb{animation:lbOn linear;animation-timeline:--s1;animation-range:entry 65% exit 35%}.dots a:nth-child(1) .dt{animation:dtOn linear;animation-timeline:--s1;animation-range:entry 65% exit 35%}.dots a:nth-child(2) .lb{animation:lbOn linear;animation-timeline:--s2;animation-range:entry 65% exit 35%}.dots a:nth-child(2) .dt{animation:dtOn linear;animation-timeline:--s2;animation-range:entry 65% exit 35%}.dots a:nth-child(3) .lb{animation:lbOn linear;animation-timeline:--s3;animation-range:entry 65% exit 35%}.dots a:nth-child(3) .dt{animation:dtOn linear;animation-timeline:--s3;animation-range:entry 65% exit 35%}.dots a:nth-child(4) .lb{animation:lbOn linear;animation-timeline:--s4;animation-range:entry 65% exit 35%}.dots a:nth-child(4) .dt{animation:dtOn linear;animation-timeline:--s4;animation-range:entry 65% exit 35%}.dots a:nth-child(5) .lb{animation:lbOn linear;animation-timeline:--s5;animation-range:entry 65% exit 35%}.dots a:nth-child(5) .dt{animation:dtOn linear;animation-timeline:--s5;animation-range:entry 65% exit 35%}.dots a:nth-child(6) .lb{animation:lbOn linear;animation-timeline:--s6;animation-range:entry 65% exit 35%}.dots a:nth-child(6) .dt{animation:dtOn linear;animation-timeline:--s6;animation-range:entry 65% exit 35%}.dots a:nth-child(7) .lb{animation:lbOn linear;animation-timeline:--s7;animation-range:entry 65% exit 35%}.dots a:nth-child(7) .dt{animation:dtOn linear;animation-timeline:--s7;animation-range:entry 65% exit 35%}.dots a:nth-child(8) .lb{animation:lbOn linear;animation-timeline:--s8;animation-range:entry 65% exit 35%}.dots a:nth-child(8) .dt{animation:dtOn linear;animation-timeline:--s8;animation-range:entry 65% exit 35%}.dots a:nth-child(9) .lb{animation:lbOn linear;animation-timeline:--s9;animation-range:entry 65% exit 35%}.dots a:nth-child(9) .dt{animation:dtOn linear;animation-timeline:--s9;animation-range:entry 65% exit 35%}
+.hand{font-family:'Gochi Hand',cursive;font-size:26px;letter-spacing:.02em;line-height:1}
+.proof{display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:16px}
+.proof b{font-size:22px;letter-spacing:-0.02em}
+.sticker-img{position:absolute;pointer-events:none;filter:drop-shadow(3px 4px 0 rgba(30,42,68,.18))}
+@media (max-width:1023px){.sticker-img{display:none}.dots{right:8px;gap:8px}.dots .dt{width:10px;height:10px}.dots .lb{font-size:10px}}
+@media (prefers-reduced-motion: reduce){.dots .lb,.dots .dt{transition:none}}
+/* TEST : 2 intercalaires derrière le principal, 50 % de hauteur, semi-transparents (supprimer ce bloc pour revenir) */
+.tabs .tab.back{display:flex !important;height:39px !important;margin-bottom:0 !important;margin-left:-16px !important;padding:0 18px 0 32px !important;font-size:15px !important;opacity:1;filter:none !important;z-index:1 !important;border-bottom:0 !important;border-left:2px solid #1E2A44 !important;border-top-left-radius:12px !important;border-top-right-radius:12px !important;transition:opacity .18s ease,transform .18s ease}
+.tabs .tab.back:hover{transform:translateY(-4px)}
+.tabs .tab.back:first-child{margin-left:0 !important;padding-left:40px !important;border-left:0 !important;border-top-left-radius:0 !important}
+.tabs .tab.front+.tab.back{margin-left:-16px !important}
+.tabs .tab.front{z-index:3 !important}
+@media (max-width:1023px){.tabs .tab.back{height:32px !important;font-size:13px !important;padding:0 12px 0 22px !important}}
+/* Seulement les intercalaires suivants (pas les précédents), et plus d'intercalaire Kortado sur le footer */
+.tabs .tab.back:has(~.tab.front){display:none !important}
+.tabs .tab[href="#pied"]{display:none !important}
+.shw:has(#pied)>.tabs{display:none !important}
+#pied.sheet{border-top:2px solid #FFFFFF !important}
+/* Escalier : -30 % à chaque marche (68 → 48 → 33 px) */
+.tabs .tab.front+.tab.back,.tabs .tab.back:has(+.tab.front){height:48px !important;font-size:15px !important;padding:0 18px 0 32px !important;z-index:2 !important}
+.tabs .tab.front+.tab.back+.tab.back,.tabs .tab.back:has(+.tab.back+.tab.front){height:33px !important;font-size:11px !important;padding:0 14px 0 28px !important;z-index:1 !important}
+.tabs .tab.back:has(+.tab.front){margin-right:-16px !important}
+.tabs .tab.back:has(+.tab.front)+.tab.front{margin-left:0 !important}
+@media (max-width:1023px){.tabs .tab.front+.tab.back,.tabs .tab.back:has(+.tab.front){height:41px !important;font-size:12px !important}.tabs .tab.front+.tab.back+.tab.back,.tabs .tab.back:has(+.tab.back+.tab.front){height:29px !important;font-size:10px !important}}
+/* Section Cas clients en jaune papier */
+#resultats.sheet{background-color:#FFF3D1 !important}
+.shw:has(#resultats)>.tabs .tab.front,.tabs .tab[href="#resultats"]{background-color:#FFF3D1 !important}
+/* Section L'agence en bleu pâle */
+#equipe.sheet{background-color:#D6E8FF !important}
+.shw:has(#equipe)>.tabs .tab.front,.tabs .tab[href="#equipe"]{background-color:#D6E8FF !important}
+/* Surlignements homogènes : uniquement pleins */
+.hlw,.mark{background:linear-gradient(transparent 14%,#FFE29A 14%,#FFE29A 92%,transparent 92%) !important;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .06em}
+.mark::after{display:none !important}
+
+/* Header rezoomé (+20 %) */
+section[aria-labelledby="hero-h"] .tt{font-size:clamp(52px,7.4vw,118px);max-width:1520px}
+section[aria-labelledby="hero-h"] .hand{font-size:31px}
+section[aria-labelledby="hero-h"] p.p3{font-size:23px !important;max-width:760px !important;margin-top:18px !important}
+section[aria-labelledby="hero-h"] .btn{min-height:62px;padding:0 30px;font-size:19px}
+section[aria-labelledby="hero-h"] .proof{font-size:19px}
+section[aria-labelledby="hero-h"] .proof b{font-size:27px}
+section[aria-labelledby="hero-h"] .proof svg{width:36px;height:36px}
+section[aria-labelledby="hero-h"] .frame>div{gap:28px !important}
+.hlw,.mark{background:linear-gradient(transparent 14%,#FFE29A 14%,#FFE29A 92%,transparent 92%) !important;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .06em}
+.mark::after{display:none !important}
+.tabs .tab.back{display:none !important}
+#pied.sheet{border-top:2px solid #FFFFFF !important}
+.sec{padding:80px 40px 72px !important}
+.h2s{font-size:clamp(44px,5.4vw,80px)}
+.pain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px}
+.bubble{position:relative;padding:26px 28px;border:2px solid #1E2A44;border-radius:22px 22px 22px 4px;background:#FFFFFF;box-shadow:4px 4px 0 #1E2A44;font-size:24px;font-weight:800;letter-spacing:-0.02em;line-height:1.2}
+.bubble:nth-child(2){transform:rotate(1deg);background:#D6E8FF}.bubble:nth-child(1){transform:rotate(-1deg)}.bubble:nth-child(3){transform:rotate(-.5deg);background:#FFF3D1}.bubble:nth-child(4){transform:rotate(1.2deg);background:#FFE29A}
+.inc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:40px}
+.inc .card{padding:26px;display:flex;flex-direction:column;gap:12px;min-height:250px}
+.inc .ic{width:56px;height:56px;border-radius:14px;border:2px solid #1E2A44;display:grid;place-items:center;box-shadow:2px 2px 0 #1E2A44}
+.inc h3{margin:0;font-size:24px;font-weight:800;letter-spacing:-0.03em}
+.inc p{margin:0;font-weight:500;color:#4A5670}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:40px;counter-reset:st}
+.step{position:relative;padding:30px 28px 28px;border:2px solid #1E2A44;border-radius:18px;background:#FFFFFF;box-shadow:4px 4px 0 #1E2A44}
+.step .n{position:absolute;top:-22px;left:24px;width:44px;height:44px;border-radius:50%;background:#FFB000;border:2px solid #1E2A44;display:grid;place-items:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;box-shadow:2px 2px 0 #1E2A44}
+.step h3{margin:6px 0 8px;font-size:24px;font-weight:800;letter-spacing:-0.03em}.step p{margin:0;font-weight:500;color:#4A5670}
+.step .badge{right:-14px;top:-16px;transform:rotate(7deg);font-size:11px;padding:6px 10px}
+.mes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.report{padding:28px;background:#1E2A44;color:#FFFFFF;border:2px solid #1E2A44;border-radius:18px;box-shadow:6px 6px 0 #FFB000}
+.kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.kpi div{border:2px solid #FFFFFF;border-radius:12px;padding:14px;background:#24345A}
+.kpi b{display:block;font-size:34px;letter-spacing:-0.04em;color:#FFB000}.kpi span{font-size:13px;color:#C9D3E3;font-weight:600}
+.funnel{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.funnel div{height:30px;border-radius:8px;background:#8FBEF7;color:#1E2A44;font-weight:800;font-size:13px;display:flex;align-items:center;padding:0 12px;border:2px solid #FFFFFF;box-sizing:border-box}
+.who{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.who span{font-weight:800;font-size:18px;padding:10px 18px;border:2px solid #1E2A44;border-radius:999px;background:#FFFFFF;box-shadow:3px 3px 0 #1E2A44}
+@media (max-width:1023px){.pain,.inc,.steps,.mes{grid-template-columns:minmax(0,1fr)}.sec{padding:64px 20px 56px !important}}
+/* Offres + section Kelian */
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:44px;align-items:stretch}
+.offer{position:relative;padding:30px 28px 26px;display:flex;flex-direction:column;gap:16px}
+.offer h3{margin:0;font-size:32px;font-weight:800;letter-spacing:-0.045em;line-height:1}
+.offer .pitch{margin:0;font-weight:700;font-size:18px;line-height:1.35}
+.offer ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-weight:500;color:#4A5670}
+.offer li{display:flex;gap:10px;align-items:flex-start}
+.offer li::before{content:"";flex:none;width:14px;height:14px;margin-top:4px;border-radius:50%;border:2px solid #1E2A44;background:#FFB000}
+.offer .price{margin-top:auto;padding-top:16px;border-top:2px dashed currentColor;display:flex;flex-direction:column;gap:14px}
+.offer .price b{font-size:22px;letter-spacing:-0.02em}
+.offer .btn{justify-content:space-between}
+.offer.feat{background:#1E2A44;color:#FFFFFF;box-shadow:6px 6px 0 #FFB000;transform:rotate(1deg)}
+.offer.feat:hover{box-shadow:7px 7px 0 #FFB000;transform:rotate(1deg) translate(-1px,-1px)}
+.offer.feat ul{color:#C9D3E3}.offer.feat li::before{border-color:#FFFFFF}
+.offer .badge{right:-14px;top:-18px;transform:rotate(7deg)}
+.kstat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:2px solid #1E2A44;border-radius:16px;background:#FFFFFF;box-shadow:4px 4px 0 #1E2A44;overflow:hidden}
+.kstat div{padding:16px 18px;border-right:2px solid #1E2A44}.kstat div:last-child{border-right:0}
+.kstat b{display:block;font-size:30px;font-weight:800;letter-spacing:-0.04em;line-height:1}.kstat span{display:block;margin-top:6px;font-size:14px;font-weight:600;color:#4A5670}
+@media (max-width:1023px){.offers{grid-template-columns:minmax(0,1fr)}.offer.feat{transform:none}}
+/* Mur d'avis (B1) */
+.b1{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.b1 .card{padding:36px 36px 28px;border-radius:24px}
+.bq{margin:0;font-size:20px;font-weight:600;line-height:1.5}
+.bfoot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:28px}
+.bfoot>span{display:flex;align-items:center;gap:14px}
+.av{display:inline-grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;border:2px solid #1E2A44;background:#FFF3D1;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px}
+.hlx{background:linear-gradient(transparent 8%,var(--h) 8%,var(--h) 96%,transparent 96%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .08em}
+.who2{display:flex;flex-direction:column;line-height:1.3}.who2 b{font-size:17px}.who2 span{font-size:14px;font-weight:600;color:#4A5670}
+.stamp{position:absolute;right:10px;top:-6px;display:inline-flex;align-items:center;z-index:4;transform:rotate(6deg)}
+.stamp-in{display:flex;flex-direction:column;align-items:center;gap:6px;padding:11px 18px 11px 66px;border:3px solid #1E2A44;border-radius:14px;background:#FFB000;box-shadow:4px 4px 0 #1E2A44;outline:2px dashed #1E2A44;outline-offset:-8px}
+.stamp-k{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.stamp-t{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:21px;line-height:.95;text-transform:uppercase;letter-spacing:-0.02em;text-align:center}
+.stamp-cup{position:absolute;left:-44px;top:50%;width:104px;transform:translateY(-58%) rotate(-10deg);filter:drop-shadow(3px 4px 0 rgba(30,42,68,.18));z-index:3}
+@media (max-width:1023px){.b1{grid-template-columns:minmax(0,1fr)}.stamp{position:relative;right:auto;top:auto;margin:20px 0 0 60px}}
+</style>
+<style>
+.kc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.kc{display:flex;flex-direction:column;border:2px solid #1E2A44;border-radius:20px;background:#FFFFFF;box-shadow:4px 4px 0 #1E2A44;overflow:hidden;transition:transform .15s ease,box-shadow .15s ease;text-decoration:none;color:#1E2A44}
+.kc:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #1E2A44;color:#1E2A44}
+.kc-vis{position:relative;margin:12px 12px 0;aspect-ratio:4/3.2;border:2px solid #1E2A44;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:18px;box-sizing:border-box}
+.kc-tag{position:relative;z-index:1;align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;padding:4px 9px;border:2px solid #1E2A44;border-radius:999px;background:#FFFFFF}
+.kc-big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(56px,5vw,84px);letter-spacing:-0.05em;line-height:.85}
+.kc-sub{font-weight:700;font-size:16px;margin-top:6px}
+.kc-mock{position:absolute;right:16px;top:16px;width:46%;background:#FFFFFF;border:2px solid #1E2A44;border-radius:10px;padding:10px;box-shadow:3px 3px 0 rgba(30,42,68,.9);transform:rotate(3deg)}
+.kc-mock i{display:block;height:7px;border-radius:4px;background:#D9DEE7;margin-top:6px}.kc-mock i:nth-child(2){width:80%}.kc-mock i:nth-child(3){width:60%}
+.kc-bars{display:flex;align-items:flex-end;gap:5px;height:46px;margin-top:8px}.kc-bars span{flex:1;border:1.5px solid #1E2A44;border-radius:3px 3px 0 0;background:#8FBEF7}.kc-bars span:last-child{background:#FFB000}
+.kc-f{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px 18px}
+.kc-n{display:flex;align-items:center;gap:10px;min-width:0}.kc-n b{font-size:19px;letter-spacing:-0.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kc-lv{flex:none;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border:2px solid #1E2A44;border-radius:999px}
+.kc-go{flex:none;font-weight:800;display:flex;align-items:center;gap:6px}
+.kc-add{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:380px;border:2px dashed #1E2A44;border-radius:20px;text-decoration:none;text-align:center;background:transparent;color:#1E2A44;transition:background-color .2s ease}
+.kc-add:hover{background:#FFF3D1;color:#1E2A44}
+.kc-pl{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#1E2A44;color:#FFFFFF;font-size:30px;font-weight:800}
+.kc-t{font-family:'Gochi Hand',cursive;font-size:30px;line-height:1.1}
+@media (max-width:1023px){.kc-grid{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div id="dc-root">
+
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #1E2A44; background: #D6E8FF; font-size: 16px; line-height: 1.5; overflow-x: clip">
+
+<header style="position: sticky; top: 0; z-index: 20; background: #FCFBF8; border-bottom: 2px solid #1E2A44">
+<div style="max-width: none; margin: 0; padding: 20px 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<div style="flex: 1 1 0; display: flex"><a href="/" aria-label="Kortado, accueil" style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -0.045em; text-decoration: none; line-height: 1">kortado<span style="color: #FFB000">.</span></a></div>
+<nav aria-label="Navigation principale" class="nav navl">
+<a class="nl" href="/google-ads" style="background: #D6E8FF">Google Ads</a>
+<a class="nl" href="/linkedin">LinkedIn</a>
+<a class="nl" href="/cas-clients">Cas clients</a>
+<a class="nl" href="/agence">L’agence</a>
+<a class="nl" href="/contact">Contact</a>
+</nav>
+<div style="flex: 1 1 0; display: flex; justify-content: flex-end"><a class="btn b-a pill" href="#rdv" style="min-height: 48px; white-space: nowrap"><span class="live" aria-hidden="true" style="background: #FFFFFF"></span>Prendre rendez-vous</a></div>
+</div>
+</header>
+
+<main id="top">
+
+<section aria-labelledby="hero-h" class="row" style="position: relative; overflow: hidden; background-color: #FFF3D1">
+<div class="frame" style="padding: 64px 40px 128px">
+<div style="display: flex; flex-direction: column; gap: 22px; align-items: center; text-align: center; position: relative">
+<img class="sticker-img bob" src="/images/sticker-graphique.png" alt="" style="left: -30px; width: 240px; --r: -6deg; position: absolute; top: 300px">
+<span class="hand p1" style="display: inline-flex; align-items: center; gap: 8px"><span>Le Google Ads rentable</span> <svg width="26" height="24" viewBox="0 0 24 22" aria-label="aimer"><path d="M12 21 C5 15 1 11 1 6.5 C1 3.5 3.5 1 6.5 1 C8.6 1 10.6 2.2 12 4 C13.4 2.2 15.4 1 17.5 1 C20.5 1 23 3.5 23 6.5 C23 11 19 15 12 21 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="1.8"></path></svg></span>
+<h1 id="hero-h" class="tt p2">Votre partenaire&nbsp;pour un&nbsp;<span class="tchip" style="background: #D6E8FF; transform: rotate(2deg)">Google Ads</span> vraiment <span class="hlw">rentable</span></h1>
+<p class="p3" style="margin: 0; max-width: 640px; font-size: 19px; font-weight: 600; line-height: 1.5">Vos campagnes vous coûtent plus qu’elles ne vous rapportent ? Je m’en occupe.<br>Génération de leads ou e-commerce, un seul objectif : votre rentabilité.<br>Robin prend le relais sur votre compte.</p>
+<div class="p3" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px"><a class="btn b-a pill" href="#rdv"><span class="live" aria-hidden="true" style="background: #FFFFFF"></span>Prendre rendez-vous</a><span class="proof"><svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="2.5" stroke-linejoin="round"></path></svg><b>+70</b><span style="font-weight: 600">TPE et PME accompagnées</span></span></div>
+</div>
+</div>
+</section>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFFFFF; color: #1E2A44">Vous vous reconnaissez ?</span></nav>
+<section id="pain" aria-labelledby="pain-h" class="row sheet" style="background: #FFFFFF">
+<div class="frame sec">
+<h2 id="pain-h" class="giant h2s">Vous vous <span class="hlw">reconnaissez</span> ?</h2>
+<div class="pain">
+<p class="bubble" style="margin:0">« Je dépense, mais ça ne me rapporte pas assez. »</p>
+<p class="bubble" style="margin:0">« Mes leads ne sont pas qualifiés. »</p>
+<p class="bubble" style="margin:0">« Mon agence n’est pas réactive. »</p>
+<p class="bubble" style="margin:0">« Je n’ose pas augmenter le budget. »</p>
+</div>
+<p style="margin: 40px 0 0; font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 10px"><span>C’est le cas de la plupart des comptes que Robin reprend.</span> <svg class="spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="2.5" stroke-linejoin="round"></path></svg></p>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #D6E8FF; color: #1E2A44">Votre expert</span></nav>
+<section id="robin" aria-labelledby="kel-h" class="row sheet" style="background: #D6E8FF">
+<div class="frame sec">
+<div class="g2" style="gap: 56px; align-items: center; position: relative">
+<figure style="margin: 0; position: relative">
+<div class="card tilt tl" style="padding: 14px; position: relative">
+<div style="aspect-ratio: 4 / 3; border: 2px solid #1E2A44; border-radius: 10px; overflow: hidden; background: #FFFFFF"><div style="width: 100%; height: 100%; display: grid; place-items: center; background: #EEF5FF; font-size: 20px; font-weight: 800; color: #4A5670">[Photo de Robin]</div></div>
+<figcaption style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 6px 4px; font-weight: 800"><span>Robin, à Lyon</span><span class="tag" style="background: #8FBEF7">Expert Google Ads</span></figcaption>
+</div>
+</figure>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<span class="tag" style="align-self: flex-start">Votre expert Google Ads</span>
+<h2 id="kel-h" class="giant" style="font-size: 65px">Un spécialiste Google Ads au service de <span class="hl">votre rentabilité</span>.</h2>
+<p style="margin: 0; max-width: 52ch; font-size: 18px; font-weight: 600">Je pilote des campagnes Google Ads pour des PME et des e-commerçants depuis plus de 5 ans, dont 3 en agence spécialisée. <span class="hlb">Leads ou ventes en ligne, mon objectif reste le même : que chaque euro investi vous rapporte plus.</span> Pas de junior ni de sous-traitant : <span class="hlb">c’est moi qui construis et pilote votre compte</span>, et qui vous montre chaque mois ce que Google Ads vous a rapporté.</p>
+<div class="kstat"><div><b>+70</b><span>TPE et PME accompagnées</span></div><div><b>+2 M€</b><span>de budget géré</span></div><div><b>+800</b><span>campagnes lancées</span></div></div>
+<div><a class="btn b-n" href="#rdv">Prendre un café avec Robin <span aria-hidden="true">→</span></a></div>
+</div>
+<span class="stk" style="left: -148px; top: -40px; display: flex; align-items: flex-end; gap: 6px; transform: rotate(-4deg); position: absolute; pointer-events: auto; cursor: move; z-index: 5" aria-hidden="true"><span class="kick" style="font-size: 14px">celui qui pilote vos campagnes</span><svg width="60" height="46" viewBox="0 0 60 46" fill="none" stroke="#1E2A44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 C26 6, 44 16, 52 40"></path><path d="M42 34 L52 41 L56 29"></path></svg></span>
+</div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FCFBF8; color: #1E2A44">Ma méthode</span></nav>
+<section id="methode" aria-labelledby="met-h" class="row sheet" style="background: #FCFBF8">
+<div class="frame sec">
+<h2 id="met-h" class="giant h2s">Votre rentabilité d’abord. <span class="hlw">Ensuite, on accélère.</span></h2>
+<p style="margin:20px 0 0;max-width:60ch;font-size:19px;font-weight:600">Votre objectif devient le mien. Je lance les campagnes Google Ads adaptées pour l’atteindre, toutes les campagnes, sans exception.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Search</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Performance Max</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Shopping</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Display</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">YouTube</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Demand Gen</span></div>
+<div class="g3" style="gap:24px;margin-top:36px">
+<article class="card" style="padding:28px 26px;display:flex;flex-direction:column;gap:12px"><span style="font-size:40px;line-height:1" aria-hidden="true">🎯</span><span class="tag" style="align-self:flex-start;background:#FFB000">Acquisition</span><h3 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.08">Amener de nouveaux clients.</h3><p style="margin:0;font-weight:500;color:#4A5670">Des campagnes pour toucher les personnes qui cherchent ce que vous vendez.</p></article>
+<article class="card" style="padding:28px 26px;display:flex;flex-direction:column;gap:12px;background:#D6E8FF"><span style="font-size:40px;line-height:1" aria-hidden="true">🔁</span><span class="tag" style="align-self:flex-start;background:#FFFFFF">Retargeting</span><h3 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.08">Convertir les audiences chaudes.</h3><p style="margin:0;font-weight:500;color:#4A5670">Pour revenir vers celles et ceux qui ont déjà montré un intérêt pour vous.</p></article>
+<article class="card" style="padding:28px 26px;display:flex;flex-direction:column;gap:12px;background:#FFF3D1"><span style="font-size:40px;line-height:1" aria-hidden="true">📣</span><span class="tag" style="align-self:flex-start;background:#FFFFFF">Et le reste</span><h3 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.08">Se faire connaître, et plus encore.</h3><p style="margin:0;font-weight:500;color:#4A5670">Notoriété ou objectifs plus spécifiques : on choisit la campagne qui sert votre objectif.</p></article>
+</div>
+<div class="card" style="margin-top:28px;padding:30px 28px;display:flex;flex-direction:column;gap:20px"><span class="tag" style="align-self:flex-start;background:#FFB000">Testing continu</span><h3 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-0.04em;line-height:1.05">Des actions continues pour toujours plus de rentabilité.</h3><div class="g3" style="gap:16px"><div style="display:flex;flex-direction:column;gap:10px;padding:22px;border:2px solid #1E2A44;border-radius:14px;background:#EEF5FF"><div style="display:flex;gap:12px;align-items:center"><span class="qn" style="background:#FFFFFF;flex:none">01</span><span class="mono" style="font-size:12px;font-weight:600;letter-spacing:.06em">TESTER</span></div><p style="margin:0;font-size:21px;font-weight:800;letter-spacing:-0.03em;line-height:1.12">On met plusieurs pistes en concurrence.</p><p style="margin:0;font-weight:500;color:#4A5670">Plutôt que de parier sur une seule idée, je compare plusieurs options sur vos vrais chiffres.</p><p style="margin:0;font-weight:700;font-size:15px;color:#1E2A44">→ Annonces, audiences, campagnes, pages d’arrivée.</p></div><div style="display:flex;flex-direction:column;gap:10px;padding:22px;border:2px solid #1E2A44;border-radius:14px;background:#FFFFFF"><div style="display:flex;gap:12px;align-items:center"><span class="qn" style="background:#FFFFFF;flex:none">02</span><span class="mono" style="font-size:12px;font-weight:600;letter-spacing:.06em">COUPER</span></div><p style="margin:0;font-size:21px;font-weight:800;letter-spacing:-0.03em;line-height:1.12">Ce qui ne rapporte pas sort du compte.</p><p style="margin:0;font-weight:500;color:#4A5670">Si une campagne ne sert pas votre objectif, elle s’arrête, sans attendre.</p><p style="margin:0;font-weight:700;font-size:15px;color:#1E2A44">→ Recherches hors sujet, annonces faibles, budget gaspillé.</p></div><div style="display:flex;flex-direction:column;gap:10px;padding:22px;border:2px solid #1E2A44;border-radius:14px;background:#FFF3D1"><div style="display:flex;gap:12px;align-items:center"><span class="qn" style="background:#FFFFFF;flex:none">03</span><span class="mono" style="font-size:12px;font-weight:600;letter-spacing:.06em">ACCÉLÉRER</span></div><p style="margin:0;font-size:21px;font-weight:800;letter-spacing:-0.03em;line-height:1.12">Le budget va là où ça rapporte.</p><p style="margin:0;font-weight:500;color:#4A5670">Ce qui fonctionne reçoit plus de moyens, pour en tirer le maximum.</p><p style="margin:0;font-weight:700;font-size:15px;color:#1E2A44">→ Budget réalloué, temps forts de votre activité.</p></div></div><p style="margin:0;font-weight:700">🪜 Premier palier : rentrer dans vos frais. Ensuite, on vise plus haut.</p></div>
+<div class="card" style="margin-top:28px;padding:26px 30px;background:#1E2A44;color:#FFFFFF;box-shadow:6px 6px 0 #FFB000;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><p style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;max-width:46ch">Chaque optimisation converge vers un seul cap : votre rentabilité, qu’on fait grandir mois après mois.</p><span class="mono" style="font-size:13px;font-weight:600;color:#FFB000">MÉTHODE ÉPROUVÉE SUR +800 CAMPAGNES</span></div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFF3D1; color: #1E2A44">Ce que je vous propose</span></nav>
+<section id="offres" aria-labelledby="off-h" class="row sheet" style="background: #FFF3D1">
+<div class="frame sec">
+<h2 id="off-h" class="giant h2s">Ce que je vous <span class="hlw">propose</span></h2>
+<p style="margin:20px 0 0;max-width:60ch;font-size:19px;font-weight:600">Trois façons de travailler ensemble, selon votre budget et le temps que vous voulez y passer.</p>
+<div class="offers">
+<article class="card offer"><span class="tag" style="align-self:flex-start;">Vous pilotez</span><h3>Coaching Google Ads</h3><p class="pitch">Vous gardez la main sur votre compte, je vous guide pour le rendre rentable.</p><ul><li>Analyse de votre compte et recommandations concrètes</li><li>1 h de session en direct chaque mois</li><li>Vous appliquez, je vérifie et je corrige</li><li>Réponses à vos questions entre les sessions</li></ul><div class="price"><b>Dès 200 €/mois</b><a class="btn b-w" href="#rdv">En parler <span aria-hidden="true">→</span></a></div></article>
+<article class="card offer"><span class="tag" style="align-self:flex-start;">Vous faites le point</span><h3>Audit Google Ads</h3><p class="pitch">Un regard expert sur votre compte, pour savoir ce qui freine votre rentabilité.</p><ul><li>Analyse complète de votre compte et de vos campagnes</li><li>Mots-clés, annonces, ciblage et suivi des conversions passés au crible</li><li>Les fuites de budget identifiées</li><li>Un plan d’action priorisé</li></ul><div class="price"><a class="btn b-w" href="#rdv">Demander un audit <span aria-hidden="true">→</span></a></div></article>
+<article class="card offer feat"><span class="badge">Le plus complet</span><span class="tag" style="align-self:flex-start;color:#1E2A44">Vous validez</span><h3>Gestion complète</h3><p class="pitch">Je pilote votre compte au quotidien, vous gardez la main sur les décisions.</p><ul><li>Stratégie, structure et suivi des conversions inclus</li><li>Optimisations continues et tests d’annonces</li><li>Point mensuel et rapport de rentabilité</li><li>Hausse du budget dès que c’est rentable</li></ul><div class="price"><b>À partir de 500 €/mois <span style="font-size:14px;font-weight:600;color:#C9D3E3">hors budget publicitaire</span></b><a class="btn b-a" href="#rdv">Prendre rendez-vous <span aria-hidden="true">→</span></a></div></article>
+</div>
+</div>
+</section>
+</div>
+
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #D6E8FF; color: #1E2A44">Comment ça se passe</span></nav>
+<section id="process" aria-labelledby="steps-h" class="row sheet" style="background: #D6E8FF">
+<div class="frame sec">
+<h2 id="steps-h" class="giant h2s">Comment ça se <span class="hlw">passe</span></h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><h3>Un appel de 45 minutes</h3><p>On fait le point sur votre activité, vos objectifs et vos campagnes actuelles, s’il y en a.</p></div>
+<div class="step"><span class="n">2</span><span class="badge">Avant de signer</span><h3>Votre projection offerte</h3><p>Je vous envoie le budget conseillé pour votre secteur et le nombre de leads qualifiés attendus à 1, 2 et 3 mois. Vous savez où vous allez avant de vous engager.</p></div>
+<div class="step"><span class="n">3</span><h3>En ligne en 10 jours</h3><p>Après votre validation, je prépare tout : mots-clés, annonces, stratégie et suivi des conversions. Vos campagnes tournent 10 jours plus tard.</p></div>
+</div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFFFFF; color: #1E2A44">Je mesure ce qui compte</span></nav>
+<section id="mesure" aria-labelledby="mes-h" class="row sheet" style="background: #FFFFFF">
+<div class="frame sec">
+<div class="mes">
+<div style="display:flex;flex-direction:column;gap:22px">
+<span class="tag" style="align-self:flex-start;background:#FFB000">★ Inclus dans la gestion complète</span>
+<h2 id="mes-h" class="giant h2s">Un rapport détaillé et <span class="hlw">analysé</span> chaque mois.</h2>
+<p style="margin: 0; max-width: 52ch; font-size: 18px; font-weight: 600">Chaque mois, je simplifie vos résultats Google Ads pour qu’ils soient clairs, et je vous livre mon analyse pour toujours aller plus loin. Soit on avance vers votre objectif de rentabilité, soit il est atteint et on scale. Dans les deux cas : on teste de nouvelles approches, on pousse ce qui fonctionne, on coupe ce qui ne fonctionne pas.</p>
+</div>
+<div class="report card tr" aria-label="Exemple de rapport mensuel">
+<div style="display:flex;justify-content:space-between;align-items:center"><span class="lab" style="color:#8FBEF7">Rapport mensuel · exemple</span><span class="mono" style="font-size:12px;color:#C9D3E3">SEPTEMBRE</span></div>
+<div class="kpi"><div><b>47 €</b><span>coût par lead</span></div><div><b>15</b><span>leads qualifiés</span></div><div><b>+153 %</b><span>de clics sur le mois</span></div></div>
+<div class="funnel"><div style="width:100%">Clics · ~440</div><div style="width:72%">Conversions · 35</div><div style="width:44%;background:#FFB000">Leads qualifiés · 15</div></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FCFBF8; color: #1E2A44">Les cas clients de Robin</span></nav>
+<section id="preuves" aria-labelledby="prf-h" class="row sheet" style="background: #FCFBF8">
+<div class="frame sec">
+<h2 id="prf-h" class="giant h2s">Les cas clients <span class="hlw">de Robin</span></h2>
+<div class="kc-grid" style="margin-top:40px"><a class="kc " href="/cas-spa"><div class="kc-vis" style="background:#FFE29A"><span class="kc-tag">Bien-être</span><div class="kc-mock" aria-hidden="true"><i></i><i></i><i></i><div class="kc-bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:100%"></span></div></div><div><div class="kc-big">9 €</div><div class="kc-sub">par appel qualifié au lieu de 80 €</div></div></div><div class="kc-f"><span class="kc-n"><b>SPA en centre-ville</b><span class="kc-lv" style="background:#FFB000">Google Ads</span></span><span class="kc-go">Découvrir <span aria-hidden="true">↗</span></span></div></a><a class="kc " href="/cas-team-building-rse"><div class="kc-vis" style="background:#D6E8FF"><span class="kc-tag">BtoB · grands comptes</span><div class="kc-mock" aria-hidden="true"><i></i><i></i><i></i><div class="kc-bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:100%"></span></div></div><div><div class="kc-big">50 €</div><div class="kc-sub">par demande de contact</div></div></div><div class="kc-f"><span class="kc-n"><b>Team building RSE</b><span class="kc-lv" style="background:#FFB000">Google Ads</span></span><span class="kc-go">Découvrir <span aria-hidden="true">↗</span></span></div></a><a class="kc " href="/cas-recyclage"><div class="kc-vis" style="background:#FFF3D1"><span class="kc-tag">Lead gen BtoB</span><div class="kc-mock" aria-hidden="true"><i></i><i></i><i></i><div class="kc-bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:100%"></span></div></div><div><div class="kc-big">−38 %</div><div class="kc-sub">de coût par conversion, à budget égal</div></div></div><div class="kc-f"><span class="kc-n"><b>Recyclage industriel</b><span class="kc-lv" style="background:#FFB000">Google Ads</span></span><span class="kc-go">Découvrir <span aria-hidden="true">↗</span></span></div></a></div>
+<p style="margin:36px 0 0;font-weight:700">Pour qui ?</p>
+<div class="who"><span>Dirigeants de PME</span><span style="background:#D6E8FF">E-commerçants</span><span style="background:#FFF3D1">Entreprises B2B</span><span style="background:#D6E8FF">Commerces et services locaux</span></div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #D6E8FF; color: #1E2A44">Ce qu’ils en disent</span></nav>
+<section id="avis" aria-labelledby="avis-h" class="row sheet" style="background: #D6E8FF">
+<div class="frame sec">
+<div style="position:relative;margin-bottom:48px"><h2 id="avis-h" class="giant h2s">Ils en parlent <span class="hlw">mieux que moi.</span></h2><span class="stamp" aria-label="Garantie sans sucre ajouté"><img src="/images/sticker-le-cool.png" alt="" class="stamp-cup"><span class="stamp-in"><span class="stamp-k">★ Garantie ★</span><span class="stamp-t">Sans sucre<br>ajouté</span></span></span></div>
+<div class="b1">
+<article class="card"><p class="bq">“Robin m'a accompagné dans la mise en place de campagnes Google Ads, avec <span class="hlx" style="--h:#D6E8FF">un ROI presque immédiat grâce à une augmentation significative des ventes</span>, couvrant largement le temps consacré à la prestation.”</p><div class="bfoot"><span><span class="av" style="background: #FFF3D1">A</span><span class="who2"><b>Adrien A.</b><span>x6 de retour sur investissement</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+<article class="card"><p class="bq">“Un vrai plaisir de travailler avec Robin qui se démarque par <span class="hlx" style="--h:#D6E8FF">son professionnalisme, sa disponibilité et sa réactivité</span>.”</p><div class="bfoot"><span><span class="av" style="background: rgb(214, 232, 255)">T</span><span class="who2"><b>Tiffany B.</b><span>x7 de retour sur investissement</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+<article class="card"><p class="bq">“Nous avons fait appel à Robin, qui a su mettre en place une stratégie parfaitement adaptée à notre activité. <span class="hlx" style="--h:#BFD9FB">Les résultats ont même dépassé ses propres prévisions !</span> Merci pour cet accompagnement.”</p><div class="bfoot"><span><span class="av" style="background: rgb(255, 226, 154)">A</span><span class="who2"><b>Alain P.</b><span>−71 % de coût par lead</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+<article class="card"><p class="bq">“Merci à Robin pour son accompagnement. Un jeune disponible, travailleur et professionnel ! <span class="hlx" style="--h:#BFD9FB">Des résultats à la hauteur de nos attentes.</span> Je recommande.”</p><div class="bfoot"><span><span class="av" style="background: rgb(143, 190, 247)">E</span><span class="who2"><b>Eric B.</b><span>+27 % de chiffre d’affaires</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+</div>
+<p class="mono" style="margin:28px 0 0;font-size:13px;color:#4A5670">Avis d’origine.</p>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFFFFF; color: #1E2A44">FAQ</span></nav>
+<section id="faq" aria-labelledby="faq-h" class="row sheet" style="background: #FFFFFF">
+<div class="frame sec">
+<div class="g2" style="grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:0">
+<div style="padding:0 40px 0 0"><h2 id="faq-h" class="disp" style="margin:0;font-size:clamp(72px,8vw,120px);display:flex;align-items:flex-start;gap:8px">FAQ ?<svg class="spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="2.5" stroke-linejoin="round"></path></svg></h2><p style="margin:18px 0 0;font-size:20px;font-weight:700;max-width:22ch">Ce qu’on me demande <span class="hl">sur Google Ads.</span></p></div>
+<div style="border:2px solid #1E2A44;border-radius:18px;background:#FFFFFF;overflow:hidden;box-shadow:4px 4px 0 #1E2A44">
+<details class="qa"><summary>La gestion complète comprend quoi exactement ?<span class="pl" aria-hidden="true">+</span></summary><p>Tout ce qu’il faut pour rendre Google Ads rentable. On commence par la stratégie et la structure du compte : mots-clés, annonces, ciblage et suivi des conversions. Ensuite, je pilote au quotidien : optimisations, tests d’annonces, ajustements des enchères et du budget. Chaque mois, on fait un point ensemble et vous recevez un rapport sur ce que vos campagnes vous ont rapporté.</p></details>
+<details class="qa"><summary>Quel budget publicitaire faut-il prévoir ?<span class="pl" aria-hidden="true">+</span></summary><p>Ça dépend de votre secteur et de vos objectifs. C’est justement ce que je calcule dans votre projection offerte : le budget conseillé et le nombre de leads qualifiés attendus à 1, 2 et 3 mois. Bonne nouvelle : pas besoin d’un gros budget pour démarrer. Plusieurs de mes clients tournent avec quelques centaines d’euros par mois, concentrés sur ce qui rapporte vraiment.</p></details>
+<details class="qa"><summary>En combien de temps je vois des résultats ?<span class="pl" aria-hidden="true">+</span></summary><p>Vos campagnes sont en ligne 10 jours après votre validation. Les premiers effets sont souvent visibles dès les premières semaines, puis les résultats s’améliorent à mesure que j’optimise. Le délai exact dépend de votre secteur et de votre budget.</p></details>
+<details class="qa"><summary>Vous travaillez aussi avec les e-commerces ?<span class="pl" aria-hidden="true">+</span></summary><p>Oui. En génération de leads, je cherche le maximum de leads qualifiés pour votre budget. En e-commerce, je pilote pour atteindre la rentabilité que vous visez, puis on augmente le budget. Search, Shopping, Display, YouTube, remarketing : j’utilise les campagnes qui servent votre objectif.</p></details>
+<details class="qa"><summary>Je m’engage pour combien de temps ?<span class="pl" aria-hidden="true">+</span></summary><p>3 mois minimum : c’est le temps qu’il faut pour construire, tester et rendre vos campagnes rentables. Ensuite, vous êtes libre de continuer ou d’arrêter.</p></details>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp tabtr" style="background: rgb(255, 220, 136); color: #1E2A44">On prend un café ?</span></nav>
+<section id="rdv" aria-labelledby="rdv-h" class="row sheet" style="background: rgb(255, 220, 136); transition: background-color .2s ease">
+<div class="frame" style="padding: 96px 40px 104px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<span class="kick">Vous allez <b>♥</b> notre collaboration</span>
+
+<h2 id="rdv-h" class="giant" style="font-size: clamp(56px, 7vw, 108px)">On prend <span style="font-style: italic">un café ?</span></h2>
+<p style="margin: 0; max-width: 440px; font-size: 18px; font-weight: 600">45 minutes pour parler de vos campagnes. Vous repartez avec une projection offerte : budget conseillé et leads qualifiés attendus à 1, 2 et 3 mois.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="padding: 0 4px; display: flex; align-items: center; gap: 24px">
+<div style="flex: 1; min-width: 0">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><label for="motiv" class="kick">Votre niveau de motivation ?</label><span class="disp" style="font-size: 24px">Curieux</span></div>
+<input id="motiv" class="rng" type="range" min="0" max="100" step="1" value="35">
+<div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: #4A5670"><span>JE REGARDE</span><span>CURIEUX</span><span>ON Y VA !</span></div>
+</div>
+<span style="flex: none; width: 160px; display: flex; justify-content: center; align-items: center; height: 130px" aria-hidden="true"><span class="cup" style="display: block; width: 111px; transition: width .2s ease"><img src="/images/tasse.png" alt="" style="display: block; width: 100%; height: auto; filter: drop-shadow(3px 4px 0 rgba(30,42,68,.18))"></span></span>
+</div>
+<div class="card" style="position: relative; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; box-shadow: 7px 7px 0 #1E2A44; transition: box-shadow .2s ease">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1E2A44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg><strong style="font-size: 20px">Choisissez votre créneau avec Robin</strong><span style="color: #4A5670; font-weight: 500">45 minutes, en visio ou autour d’un café à Lyon.</span><a class="btn b-a pill" href="https://calendly.com/consultant-robinvincent/" target="_blank" rel="noopener">Ouvrir le calendrier <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+</main>
+
+<div class="shw">
+<footer id="pied" class="sheet" style="background: #1E2A44; color: #FFFFFF; position: relative; overflow: hidden">
+
+<div class="frame" style="border-color: #FFFFFF; padding: 56px 40px 32px">
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; padding-bottom: 48px">
+<div><p style="margin: 0; font-weight: 600; color: #C9D3E3; max-width: 26ch">Agence d’acquisition Google Ads &amp; LinkedIn à Lyon.</p></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7">OFFRES</p><a href="/google-ads">Google Ads</a><a href="/linkedin">LinkedIn</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7">KORTADO</p><a href="/">Accueil</a><a href="/cas-clients">Cas clients</a><a href="/agence">L’agence</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7">CONTACT</p><a href="#rdv">Réserver un appel</a><a href="mailto:contact@kortado.fr">contact@kortado.fr</a><a href="/contact">5 allée des Tilleuls, 69570 Dardilly</a></div>
+</div>
+<p aria-hidden="true" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(80px, 17vw, 250px); font-weight: 800; letter-spacing: -0.06em; line-height: .8">kortado<span style="color: #FFB000">.</span></p>
+<div style="margin-top: 40px; padding-top: 22px; border-top: 2px solid #FFFFFF; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 14px; font-weight: 600"><span>© 2026 Kortado · Lyon · <a href="/mentions-legales" style="color:inherit;display:inline;line-height:inherit">Mentions légales</a> · <a href="/confidentialite" style="color:inherit;display:inline;line-height:inherit">Politique de confidentialité</a></span><span class="mono" style="color: #FFB000">FAIT AVEC BEAUCOUP DE CAFÉ</span></div>
+</div>
+</footer>
+</div>
+
+</div>
+</div>
+<template id="dc-tpl">
+
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #1E2A44; background: #D6E8FF; font-size: 16px; line-height: 1.5; overflow-x: clip">
+
+<header style="position: sticky; top: 0; z-index: 20; background: {{fond}}; border-bottom: 2px solid #1E2A44">
+<div style="max-width: none; margin: 0; padding: 20px 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<div style="flex: 1 1 0; display: flex"><a href="/" aria-label="Kortado, accueil" style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -0.045em; text-decoration: none; line-height: 1">kortado<span style="color: #FFB000">.</span></a></div>
+<nav aria-label="Navigation principale" class="nav navl">
+<a class="nl" href="/google-ads" style="background: #D6E8FF">Google Ads</a>
+<a class="nl" href="/linkedin">LinkedIn</a>
+<a class="nl" href="/cas-clients">Cas clients</a>
+<a class="nl" href="/agence">L’agence</a>
+<a class="nl" href="/contact">Contact</a>
+</nav>
+<div style="flex: 1 1 0; display: flex; justify-content: flex-end"><a class="btn b-a pill" href="#rdv" style="min-height: 48px; white-space: nowrap"><span class="live" aria-hidden="true" style="background: #FFFFFF"></span>Prendre rendez-vous</a></div>
+</div>
+</header>
+
+<main id="top">
+
+<section aria-labelledby="hero-h" class="row" style="position: relative; overflow: hidden; background-color: #FFF3D1">
+<div class="frame" style="padding: 64px 40px 128px">
+<div style="display: flex; flex-direction: column; gap: 22px; align-items: center; text-align: center; position: relative">
+<img class="sticker-img bob" src="/images/sticker-graphique.png" alt="" style="left: -30px; width: 240px; --r: -6deg; position: absolute; top: 300px">
+<span class="hand p1" style="display: inline-flex; align-items: center; gap: 8px"><span>Le Google Ads rentable</span> <svg width="26" height="24" viewBox="0 0 24 22" aria-label="aimer"><path d="M12 21 C5 15 1 11 1 6.5 C1 3.5 3.5 1 6.5 1 C8.6 1 10.6 2.2 12 4 C13.4 2.2 15.4 1 17.5 1 C20.5 1 23 3.5 23 6.5 C23 11 19 15 12 21 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="1.8"></path></svg></span>
+<h1 id="hero-h" class="tt p2">Votre partenaire&nbsp;pour un&nbsp;<span class="tchip" style="background: #D6E8FF; transform: rotate(2deg)">Google Ads</span> vraiment <span class="hlw">rentable</span></h1>
+<p class="p3" style="margin: 0; max-width: 640px; font-size: 19px; font-weight: 600; line-height: 1.5">Vos campagnes vous coûtent plus qu’elles ne vous rapportent ? Je m’en occupe.<br>Génération de leads ou e-commerce, un seul objectif : votre rentabilité.<br>Robin prend le relais sur votre compte.</p>
+<div class="p3" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px"><a class="btn b-a pill" href="#rdv"><span class="live" aria-hidden="true" style="background: #FFFFFF"></span>Prendre rendez-vous</a><span class="proof"><svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="2.5" stroke-linejoin="round"></path></svg><b>+70</b><span style="font-weight: 600">TPE et PME accompagnées</span></span></div>
+</div>
+</div>
+</section>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFFFFF; color: #1E2A44">Vous vous reconnaissez ?</span></nav>
+<section id="pain" aria-labelledby="pain-h" class="row sheet" style="background: #FFFFFF">
+<div class="frame sec">
+<h2 id="pain-h" class="giant h2s">Vous vous <span class="hlw">reconnaissez</span> ?</h2>
+<div class="pain">
+<p class="bubble" style="margin:0">« Je dépense, mais ça ne me rapporte pas assez. »</p>
+<p class="bubble" style="margin:0">« Mes leads ne sont pas qualifiés. »</p>
+<p class="bubble" style="margin:0">« Mon agence n’est pas réactive. »</p>
+<p class="bubble" style="margin:0">« Je n’ose pas augmenter le budget. »</p>
+</div>
+<p style="margin: 40px 0 0; font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 10px"><span>C’est le cas de la plupart des comptes que Robin reprend.</span> <svg class="spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="2.5" stroke-linejoin="round"></path></svg></p>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #D6E8FF; color: #1E2A44">Votre expert</span></nav>
+<section id="robin" aria-labelledby="kel-h" class="row sheet" style="background: #D6E8FF">
+<div class="frame sec">
+<div class="g2" style="gap: 56px; align-items: center; position: relative">
+<figure style="margin: 0; position: relative">
+<div class="card tilt tl" style="padding: 14px; position: relative">
+<div style="aspect-ratio: 4 / 3; border: 2px solid #1E2A44; border-radius: 10px; overflow: hidden; background: #FFFFFF"><div style="width: 100%; height: 100%; display: grid; place-items: center; background: #EEF5FF; font-size: 20px; font-weight: 800; color: #4A5670">[Photo de Robin]</div></div>
+<figcaption style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 6px 4px; font-weight: 800"><span>Robin, à Lyon</span><span class="tag" style="background: #8FBEF7">Expert Google Ads</span></figcaption>
+</div>
+</figure>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<span class="tag" style="align-self: flex-start">Votre expert Google Ads</span>
+<h2 id="kel-h" class="giant" style="font-size: 65px">Un spécialiste Google Ads au service de <span class="hl">votre rentabilité</span>.</h2>
+<p style="margin: 0; max-width: 52ch; font-size: 18px; font-weight: 600">Je pilote des campagnes Google Ads pour des PME et des e-commerçants depuis plus de 5 ans, dont 3 en agence spécialisée. <span class="hlb">Leads ou ventes en ligne, mon objectif reste le même : que chaque euro investi vous rapporte plus.</span> Pas de junior ni de sous-traitant : <span class="hlb">c’est moi qui construis et pilote votre compte</span>, et qui vous montre chaque mois ce que Google Ads vous a rapporté.</p>
+<div class="kstat"><div><b>+70</b><span>TPE et PME accompagnées</span></div><div><b>+2 M€</b><span>de budget géré</span></div><div><b>+800</b><span>campagnes lancées</span></div></div>
+<div><a class="btn b-n" href="#rdv">Prendre un café avec Robin <span aria-hidden="true">→</span></a></div>
+</div>
+<span class="stk" style="left: -148px; top: -40px; display: flex; align-items: flex-end; gap: 6px; transform: rotate(-4deg); position: absolute; pointer-events: auto; cursor: move; z-index: 5" aria-hidden="true"><span class="kick" style="font-size: 14px">celui qui pilote vos campagnes</span><svg width="60" height="46" viewBox="0 0 60 46" fill="none" stroke="#1E2A44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 C26 6, 44 16, 52 40"></path><path d="M42 34 L52 41 L56 29"></path></svg></span>
+</div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FCFBF8; color: #1E2A44">Ma méthode</span></nav>
+<section id="methode" aria-labelledby="met-h" class="row sheet" style="background: #FCFBF8">
+<div class="frame sec">
+<h2 id="met-h" class="giant h2s">Votre rentabilité d’abord. <span class="hlw">Ensuite, on accélère.</span></h2>
+<p style="margin:20px 0 0;max-width:60ch;font-size:19px;font-weight:600">Votre objectif devient le mien. Je lance les campagnes Google Ads adaptées pour l’atteindre, toutes les campagnes, sans exception.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Search</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Performance Max</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Shopping</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Display</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">YouTube</span><span class="mono" style="font-size:13px;font-weight:600;background:#FFFFFF;border:2px solid #1E2A44;border-radius:999px;padding:6px 14px">Demand Gen</span></div>
+<div class="g3" style="gap:24px;margin-top:36px">
+<article class="card" style="padding:28px 26px;display:flex;flex-direction:column;gap:12px"><span style="font-size:40px;line-height:1" aria-hidden="true">🎯</span><span class="tag" style="align-self:flex-start;background:#FFB000">Acquisition</span><h3 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.08">Amener de nouveaux clients.</h3><p style="margin:0;font-weight:500;color:#4A5670">Des campagnes pour toucher les personnes qui cherchent ce que vous vendez.</p></article>
+<article class="card" style="padding:28px 26px;display:flex;flex-direction:column;gap:12px;background:#D6E8FF"><span style="font-size:40px;line-height:1" aria-hidden="true">🔁</span><span class="tag" style="align-self:flex-start;background:#FFFFFF">Retargeting</span><h3 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.08">Convertir les audiences chaudes.</h3><p style="margin:0;font-weight:500;color:#4A5670">Pour revenir vers celles et ceux qui ont déjà montré un intérêt pour vous.</p></article>
+<article class="card" style="padding:28px 26px;display:flex;flex-direction:column;gap:12px;background:#FFF3D1"><span style="font-size:40px;line-height:1" aria-hidden="true">📣</span><span class="tag" style="align-self:flex-start;background:#FFFFFF">Et le reste</span><h3 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.08">Se faire connaître, et plus encore.</h3><p style="margin:0;font-weight:500;color:#4A5670">Notoriété ou objectifs plus spécifiques : on choisit la campagne qui sert votre objectif.</p></article>
+</div>
+<div class="card" style="margin-top:28px;padding:30px 28px;display:flex;flex-direction:column;gap:20px"><span class="tag" style="align-self:flex-start;background:#FFB000">Testing continu</span><h3 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-0.04em;line-height:1.05">Des actions continues pour toujours plus de rentabilité.</h3><div class="g3" style="gap:16px"><div style="display:flex;flex-direction:column;gap:10px;padding:22px;border:2px solid #1E2A44;border-radius:14px;background:#EEF5FF"><div style="display:flex;gap:12px;align-items:center"><span class="qn" style="background:#FFFFFF;flex:none">01</span><span class="mono" style="font-size:12px;font-weight:600;letter-spacing:.06em">TESTER</span></div><p style="margin:0;font-size:21px;font-weight:800;letter-spacing:-0.03em;line-height:1.12">On met plusieurs pistes en concurrence.</p><p style="margin:0;font-weight:500;color:#4A5670">Plutôt que de parier sur une seule idée, je compare plusieurs options sur vos vrais chiffres.</p><p style="margin:0;font-weight:700;font-size:15px;color:#1E2A44">→ Annonces, audiences, campagnes, pages d’arrivée.</p></div><div style="display:flex;flex-direction:column;gap:10px;padding:22px;border:2px solid #1E2A44;border-radius:14px;background:#FFFFFF"><div style="display:flex;gap:12px;align-items:center"><span class="qn" style="background:#FFFFFF;flex:none">02</span><span class="mono" style="font-size:12px;font-weight:600;letter-spacing:.06em">COUPER</span></div><p style="margin:0;font-size:21px;font-weight:800;letter-spacing:-0.03em;line-height:1.12">Ce qui ne rapporte pas sort du compte.</p><p style="margin:0;font-weight:500;color:#4A5670">Si une campagne ne sert pas votre objectif, elle s’arrête, sans attendre.</p><p style="margin:0;font-weight:700;font-size:15px;color:#1E2A44">→ Recherches hors sujet, annonces faibles, budget gaspillé.</p></div><div style="display:flex;flex-direction:column;gap:10px;padding:22px;border:2px solid #1E2A44;border-radius:14px;background:#FFF3D1"><div style="display:flex;gap:12px;align-items:center"><span class="qn" style="background:#FFFFFF;flex:none">03</span><span class="mono" style="font-size:12px;font-weight:600;letter-spacing:.06em">ACCÉLÉRER</span></div><p style="margin:0;font-size:21px;font-weight:800;letter-spacing:-0.03em;line-height:1.12">Le budget va là où ça rapporte.</p><p style="margin:0;font-weight:500;color:#4A5670">Ce qui fonctionne reçoit plus de moyens, pour en tirer le maximum.</p><p style="margin:0;font-weight:700;font-size:15px;color:#1E2A44">→ Budget réalloué, temps forts de votre activité.</p></div></div><p style="margin:0;font-weight:700">🪜 Premier palier : rentrer dans vos frais. Ensuite, on vise plus haut.</p></div>
+<div class="card" style="margin-top:28px;padding:26px 30px;background:#1E2A44;color:#FFFFFF;box-shadow:6px 6px 0 #FFB000;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><p style="margin:0;font-size:22px;font-weight:800;letter-spacing:-0.02em;max-width:46ch">Chaque optimisation converge vers un seul cap : votre rentabilité, qu’on fait grandir mois après mois.</p><span class="mono" style="font-size:13px;font-weight:600;color:#FFB000">MÉTHODE ÉPROUVÉE SUR +800 CAMPAGNES</span></div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFF3D1; color: #1E2A44">Ce que je vous propose</span></nav>
+<section id="offres" aria-labelledby="off-h" class="row sheet" style="background: #FFF3D1">
+<div class="frame sec">
+<h2 id="off-h" class="giant h2s">Ce que je vous <span class="hlw">propose</span></h2>
+<p style="margin:20px 0 0;max-width:60ch;font-size:19px;font-weight:600">Trois façons de travailler ensemble, selon votre budget et le temps que vous voulez y passer.</p>
+<div class="offers">
+<article class="card offer"><span class="tag" style="align-self:flex-start;">Vous pilotez</span><h3>Coaching Google Ads</h3><p class="pitch">Vous gardez la main sur votre compte, je vous guide pour le rendre rentable.</p><ul><li>Analyse de votre compte et recommandations concrètes</li><li>1 h de session en direct chaque mois</li><li>Vous appliquez, je vérifie et je corrige</li><li>Réponses à vos questions entre les sessions</li></ul><div class="price"><b>Dès 200 €/mois</b><a class="btn b-w" href="#rdv">En parler <span aria-hidden="true">→</span></a></div></article>
+<article class="card offer"><span class="tag" style="align-self:flex-start;">Vous faites le point</span><h3>Audit Google Ads</h3><p class="pitch">Un regard expert sur votre compte, pour savoir ce qui freine votre rentabilité.</p><ul><li>Analyse complète de votre compte et de vos campagnes</li><li>Mots-clés, annonces, ciblage et suivi des conversions passés au crible</li><li>Les fuites de budget identifiées</li><li>Un plan d’action priorisé</li></ul><div class="price"><a class="btn b-w" href="#rdv">Demander un audit <span aria-hidden="true">→</span></a></div></article>
+<article class="card offer feat"><span class="badge">Le plus complet</span><span class="tag" style="align-self:flex-start;color:#1E2A44">Vous validez</span><h3>Gestion complète</h3><p class="pitch">Je pilote votre compte au quotidien, vous gardez la main sur les décisions.</p><ul><li>Stratégie, structure et suivi des conversions inclus</li><li>Optimisations continues et tests d’annonces</li><li>Point mensuel et rapport de rentabilité</li><li>Hausse du budget dès que c’est rentable</li></ul><div class="price"><b>À partir de 500 €/mois <span style="font-size:14px;font-weight:600;color:#C9D3E3">hors budget publicitaire</span></b><a class="btn b-a" href="#rdv">Prendre rendez-vous <span aria-hidden="true">→</span></a></div></article>
+</div>
+</div>
+</section>
+</div>
+
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #D6E8FF; color: #1E2A44">Comment ça se passe</span></nav>
+<section id="process" aria-labelledby="steps-h" class="row sheet" style="background: #D6E8FF">
+<div class="frame sec">
+<h2 id="steps-h" class="giant h2s">Comment ça se <span class="hlw">passe</span></h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><h3>Un appel de 45 minutes</h3><p>On fait le point sur votre activité, vos objectifs et vos campagnes actuelles, s’il y en a.</p></div>
+<div class="step"><span class="n">2</span><span class="badge">Avant de signer</span><h3>Votre projection offerte</h3><p>Je vous envoie le budget conseillé pour votre secteur et le nombre de leads qualifiés attendus à 1, 2 et 3 mois. Vous savez où vous allez avant de vous engager.</p></div>
+<div class="step"><span class="n">3</span><h3>En ligne en 10 jours</h3><p>Après votre validation, je prépare tout : mots-clés, annonces, stratégie et suivi des conversions. Vos campagnes tournent 10 jours plus tard.</p></div>
+</div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFFFFF; color: #1E2A44">Je mesure ce qui compte</span></nav>
+<section id="mesure" aria-labelledby="mes-h" class="row sheet" style="background: #FFFFFF">
+<div class="frame sec">
+<div class="mes">
+<div style="display:flex;flex-direction:column;gap:22px">
+<span class="tag" style="align-self:flex-start;background:#FFB000">★ Inclus dans la gestion complète</span>
+<h2 id="mes-h" class="giant h2s">Un rapport détaillé et <span class="hlw">analysé</span> chaque mois.</h2>
+<p style="margin: 0; max-width: 52ch; font-size: 18px; font-weight: 600">Chaque mois, je simplifie vos résultats Google Ads pour qu’ils soient clairs, et je vous livre mon analyse pour toujours aller plus loin. Soit on avance vers votre objectif de rentabilité, soit il est atteint et on scale. Dans les deux cas : on teste de nouvelles approches, on pousse ce qui fonctionne, on coupe ce qui ne fonctionne pas.</p>
+</div>
+<div class="report card tr" aria-label="Exemple de rapport mensuel">
+<div style="display:flex;justify-content:space-between;align-items:center"><span class="lab" style="color:#8FBEF7">Rapport mensuel · exemple</span><span class="mono" style="font-size:12px;color:#C9D3E3">SEPTEMBRE</span></div>
+<div class="kpi"><div><b>47 €</b><span>coût par lead</span></div><div><b>15</b><span>leads qualifiés</span></div><div><b>+153 %</b><span>de clics sur le mois</span></div></div>
+<div class="funnel"><div style="width:100%">Clics · ~440</div><div style="width:72%">Conversions · 35</div><div style="width:44%;background:#FFB000">Leads qualifiés · 15</div></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FCFBF8; color: #1E2A44">Les cas clients de Robin</span></nav>
+<section id="preuves" aria-labelledby="prf-h" class="row sheet" style="background: #FCFBF8">
+<div class="frame sec">
+<h2 id="prf-h" class="giant h2s">Les cas clients <span class="hlw">de Robin</span></h2>
+<div class="kc-grid" style="margin-top:40px"><a class="kc " href="/cas-spa"><div class="kc-vis" style="background:#FFE29A"><span class="kc-tag">Bien-être</span><div class="kc-mock" aria-hidden="true"><i></i><i></i><i></i><div class="kc-bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:100%"></span></div></div><div><div class="kc-big">9 €</div><div class="kc-sub">par appel qualifié au lieu de 80 €</div></div></div><div class="kc-f"><span class="kc-n"><b>SPA en centre-ville</b><span class="kc-lv" style="background:#FFB000">Google Ads</span></span><span class="kc-go">Découvrir <span aria-hidden="true">↗</span></span></div></a><a class="kc " href="/cas-team-building-rse"><div class="kc-vis" style="background:#D6E8FF"><span class="kc-tag">BtoB · grands comptes</span><div class="kc-mock" aria-hidden="true"><i></i><i></i><i></i><div class="kc-bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:100%"></span></div></div><div><div class="kc-big">50 €</div><div class="kc-sub">par demande de contact</div></div></div><div class="kc-f"><span class="kc-n"><b>Team building RSE</b><span class="kc-lv" style="background:#FFB000">Google Ads</span></span><span class="kc-go">Découvrir <span aria-hidden="true">↗</span></span></div></a><a class="kc " href="/cas-recyclage"><div class="kc-vis" style="background:#FFF3D1"><span class="kc-tag">Lead gen BtoB</span><div class="kc-mock" aria-hidden="true"><i></i><i></i><i></i><div class="kc-bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:100%"></span></div></div><div><div class="kc-big">−38 %</div><div class="kc-sub">de coût par conversion, à budget égal</div></div></div><div class="kc-f"><span class="kc-n"><b>Recyclage industriel</b><span class="kc-lv" style="background:#FFB000">Google Ads</span></span><span class="kc-go">Découvrir <span aria-hidden="true">↗</span></span></div></a></div>
+<p style="margin:36px 0 0;font-weight:700">Pour qui ?</p>
+<div class="who"><span>Dirigeants de PME</span><span style="background:#D6E8FF">E-commerçants</span><span style="background:#FFF3D1">Entreprises B2B</span><span style="background:#D6E8FF">Commerces et services locaux</span></div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #D6E8FF; color: #1E2A44">Ce qu’ils en disent</span></nav>
+<section id="avis" aria-labelledby="avis-h" class="row sheet" style="background: #D6E8FF">
+<div class="frame sec">
+<div style="position:relative;margin-bottom:48px"><h2 id="avis-h" class="giant h2s">Ils en parlent <span class="hlw">mieux que moi.</span></h2><span class="stamp" aria-label="Garantie sans sucre ajouté"><img src="/images/sticker-le-cool.png" alt="" class="stamp-cup"><span class="stamp-in"><span class="stamp-k">★ Garantie ★</span><span class="stamp-t">Sans sucre<br>ajouté</span></span></span></div>
+<div class="b1">
+<article class="card"><p class="bq">“Robin m'a accompagné dans la mise en place de campagnes Google Ads, avec <span class="hlx" style="--h:#D6E8FF">un ROI presque immédiat grâce à une augmentation significative des ventes</span>, couvrant largement le temps consacré à la prestation.”</p><div class="bfoot"><span><span class="av" style="background: #FFF3D1">A</span><span class="who2"><b>Adrien A.</b><span>x6 de retour sur investissement</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+<article class="card"><p class="bq">“Un vrai plaisir de travailler avec Robin qui se démarque par <span class="hlx" style="--h:#D6E8FF">son professionnalisme, sa disponibilité et sa réactivité</span>.”</p><div class="bfoot"><span><span class="av" style="background: rgb(214, 232, 255)">T</span><span class="who2"><b>Tiffany B.</b><span>x7 de retour sur investissement</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+<article class="card"><p class="bq">“Nous avons fait appel à Robin, qui a su mettre en place une stratégie parfaitement adaptée à notre activité. <span class="hlx" style="--h:#BFD9FB">Les résultats ont même dépassé ses propres prévisions !</span> Merci pour cet accompagnement.”</p><div class="bfoot"><span><span class="av" style="background: rgb(255, 226, 154)">A</span><span class="who2"><b>Alain P.</b><span>−71 % de coût par lead</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+<article class="card"><p class="bq">“Merci à Robin pour son accompagnement. Un jeune disponible, travailleur et professionnel ! <span class="hlx" style="--h:#BFD9FB">Des résultats à la hauteur de nos attentes.</span> Je recommande.”</p><div class="bfoot"><span><span class="av" style="background: rgb(143, 190, 247)">E</span><span class="who2"><b>Eric B.</b><span>+27 % de chiffre d’affaires</span></span></span><span class="mono" role="img" aria-label="5 étoiles sur 5" style="font-size:18px;color:#1E2A44;letter-spacing:.08em">★★★★★</span></div></article>
+</div>
+<p class="mono" style="margin:28px 0 0;font-size:13px;color:#4A5670">Avis d’origine.</p>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp" style="background: #FFFFFF; color: #1E2A44">FAQ</span></nav>
+<section id="faq" aria-labelledby="faq-h" class="row sheet" style="background: #FFFFFF">
+<div class="frame sec">
+<div class="g2" style="grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:0">
+<div style="padding:0 40px 0 0"><h2 id="faq-h" class="disp" style="margin:0;font-size:clamp(72px,8vw,120px);display:flex;align-items:flex-start;gap:8px">FAQ ?<svg class="spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" fill="#FFB000" stroke="#1E2A44" stroke-width="2.5" stroke-linejoin="round"></path></svg></h2><p style="margin:18px 0 0;font-size:20px;font-weight:700;max-width:22ch">Ce qu’on me demande <span class="hl">sur Google Ads.</span></p></div>
+<div style="border:2px solid #1E2A44;border-radius:18px;background:#FFFFFF;overflow:hidden;box-shadow:4px 4px 0 #1E2A44">
+<details class="qa"><summary>La gestion complète comprend quoi exactement ?<span class="pl" aria-hidden="true">+</span></summary><p>Tout ce qu’il faut pour rendre Google Ads rentable. On commence par la stratégie et la structure du compte : mots-clés, annonces, ciblage et suivi des conversions. Ensuite, je pilote au quotidien : optimisations, tests d’annonces, ajustements des enchères et du budget. Chaque mois, on fait un point ensemble et vous recevez un rapport sur ce que vos campagnes vous ont rapporté.</p></details>
+<details class="qa"><summary>Quel budget publicitaire faut-il prévoir ?<span class="pl" aria-hidden="true">+</span></summary><p>Ça dépend de votre secteur et de vos objectifs. C’est justement ce que je calcule dans votre projection offerte : le budget conseillé et le nombre de leads qualifiés attendus à 1, 2 et 3 mois. Bonne nouvelle : pas besoin d’un gros budget pour démarrer. Plusieurs de mes clients tournent avec quelques centaines d’euros par mois, concentrés sur ce qui rapporte vraiment.</p></details>
+<details class="qa"><summary>En combien de temps je vois des résultats ?<span class="pl" aria-hidden="true">+</span></summary><p>Vos campagnes sont en ligne 10 jours après votre validation. Les premiers effets sont souvent visibles dès les premières semaines, puis les résultats s’améliorent à mesure que j’optimise. Le délai exact dépend de votre secteur et de votre budget.</p></details>
+<details class="qa"><summary>Vous travaillez aussi avec les e-commerces ?<span class="pl" aria-hidden="true">+</span></summary><p>Oui. En génération de leads, je cherche le maximum de leads qualifiés pour votre budget. En e-commerce, je pilote pour atteindre la rentabilité que vous visez, puis on augmente le budget. Search, Shopping, Display, YouTube, remarketing : j’utilise les campagnes qui servent votre objectif.</p></details>
+<details class="qa"><summary>Je m’engage pour combien de temps ?<span class="pl" aria-hidden="true">+</span></summary><p>3 mois minimum : c’est le temps qu’il faut pour construire, tester et rendre vos campagnes rentables. Ensuite, vous êtes libre de continuer ou d’arrêter.</p></details>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="shw">
+<nav class="tabs" aria-label="Sections" style="padding-left: 0px"><span class="tab front disp tabtr" style="background: {{rdvBg}}; color: #1E2A44">On prend un café ?</span></nav>
+<section id="rdv" aria-labelledby="rdv-h" class="row sheet" style="background: {{rdvBg}}; transition: background-color .2s ease">
+<div class="frame" style="padding: 96px 40px 104px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<span class="kick">Vous allez <b>♥</b> notre collaboration</span>
+
+<h2 id="rdv-h" class="giant" style="font-size: clamp(56px, 7vw, 108px)">On prend <span style="font-style: italic">un café ?</span></h2>
+<p style="margin: 0; max-width: 440px; font-size: 18px; font-weight: 600">45 minutes pour parler de vos campagnes. Vous repartez avec une projection offerte : budget conseillé et leads qualifiés attendus à 1, 2 et 3 mois.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="padding: 0 4px; display: flex; align-items: center; gap: 24px">
+<div style="flex: 1; min-width: 0">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><label for="motiv" class="kick">Votre niveau de motivation ?</label><span class="disp" style="font-size: 24px">{{motivTxt}}</span></div>
+<input id="motiv" class="rng" type="range" min="0" max="100" step="1" value="{{motiv}}" onInput="{{onMotiv}}">
+<div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: #4A5670"><span>JE REGARDE</span><span>CURIEUX</span><span>ON Y VA !</span></div>
+</div>
+<span style="flex: none; width: 160px; display: flex; justify-content: center; align-items: center; height: 130px" aria-hidden="true"><span class="cup" style="display: block; width: {{cupW}}; transition: width .2s ease"><img src="/images/tasse.png" alt="" style="display: block; width: 100%; height: auto; filter: drop-shadow(3px 4px 0 rgba(30,42,68,.18))"></span></span>
+</div>
+<div class="card" style="position: relative; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; box-shadow: {{calSh}}; transition: box-shadow .2s ease">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1E2A44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg><strong style="font-size: 20px">Choisissez votre créneau avec Robin</strong><span style="color: #4A5670; font-weight: 500">45 minutes, en visio ou autour d’un café à Lyon.</span><a class="btn b-a pill" href="https://calendly.com/consultant-robinvincent/" target="_blank" rel="noopener">Ouvrir le calendrier <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+</main>
+
+<div class="shw">
+<footer id="pied" class="sheet" style="background: #1E2A44; color: #FFFFFF; position: relative; overflow: hidden">
+
+<div class="frame" style="border-color: #FFFFFF; padding: 56px 40px 32px">
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; padding-bottom: 48px">
+<div><p style="margin: 0; font-weight: 600; color: #C9D3E3; max-width: 26ch">Agence d’acquisition Google Ads &amp; LinkedIn à Lyon.</p></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7">OFFRES</p><a href="/google-ads">Google Ads</a><a href="/linkedin">LinkedIn</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7">KORTADO</p><a href="/">Accueil</a><a href="/cas-clients">Cas clients</a><a href="/agence">L’agence</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7">CONTACT</p><a href="#rdv">Réserver un appel</a><a href="mailto:contact@kortado.fr">contact@kortado.fr</a><a href="/contact">5 allée des Tilleuls, 69570 Dardilly</a></div>
+</div>
+<p aria-hidden="true" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(80px, 17vw, 250px); font-weight: 800; letter-spacing: -0.06em; line-height: .8">kortado<span style="color: #FFB000">.</span></p>
+<div style="margin-top: 40px; padding-top: 22px; border-top: 2px solid #FFFFFF; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 14px; font-weight: 600"><span>© 2026 Kortado · Lyon · <a href="/mentions-legales" style="color:inherit;display:inline;line-height:inherit">Mentions légales</a> · <a href="/confidentialite" style="color:inherit;display:inline;line-height:inherit">Politique de confidentialité</a></span><span class="mono" style="color: #FFB000">FAIT AVEC BEAUCOUP DE CAFÉ</span></div>
+</div>
+</footer>
+</div>
+
+</div>
+</template>
+<script type="application/json" id="dc-props">{"fond":{"editor":"color","default":"#FCFBF8"},"$preview":{"width":1440,"height":7000}}</script>
+<script src="/js/dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { motiv: 35 }; }
+  renderVals() {
+    const s = this.state;
+    return {
+      fond: this.props.fond ?? '#FCFBF8',
+      motiv: s.motiv, onMotiv: (e) => this.setState({ motiv: Number(e.target.value) }),
+      motivTxt: s.motiv < 34 ? 'Je regarde' : s.motiv < 67 ? 'Curieux' : s.motiv < 100 ? 'On y va !' : 'Café servi !',
+      rdvBg: 'rgb(255, ' + Math.round(243 - 67 * s.motiv / 100) + ', ' + Math.round(209 - 209 * s.motiv / 100) + ')',
+      calSh: Math.round(4 + 8 * s.motiv / 100) + 'px ' + Math.round(4 + 8 * s.motiv / 100) + 'px 0 #1E2A44',
+      cupW: Math.round(90 + 60 * s.motiv / 100) + 'px'
+    };
+  }
+}
+</script>
+</body>
+</html>
