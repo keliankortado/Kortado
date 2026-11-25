@@ -437,6 +437,17 @@ textarea.inp{min-height:140px;padding:14px 16px;resize:vertical;line-height:1.5}
 .req{color:#C0392B;font-weight:800}
 .inp[aria-invalid="true"]{border-color:#C0392B;box-shadow:0 0 0 3px rgba(192,57,43,.18)}
 </style>
+<style>
+/* Logos clients : bleu nuit, couleurs au survol */
+#confiance .cf-logos,#confiance .logos{grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:20px !important}
+#confiance .klg{height:112px !important;padding:18px 26px;box-sizing:border-box;border:2px solid #1E2A44 !important;border-radius:14px;background:#FFFFFF !important;box-shadow:3px 3px 0 #1E2A44;display:grid;place-items:center;transition:transform .15s ease,box-shadow .15s ease}
+#confiance .klg:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #1E2A44}
+#confiance .klg img{grid-area:1/1;display:block;max-width:100%;max-height:50px;object-fit:contain;border:0;box-shadow:none;border-radius:0;transition:opacity .2s ease}
+#confiance .klg.tall img{max-height:76px}
+#confiance .klg img.klg-c{opacity:0}#confiance .klg:hover img.klg-c{opacity:1}#confiance .klg:hover img.klg-sw{opacity:0}
+#confiance .cf-logo.you,#confiance .logo.you{height:112px;box-sizing:border-box}
+@media (max-width:1023px){#confiance .cf-logos,#confiance .logos{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+</style>
 </head>
 <body>
 <div id="dc-root">
@@ -524,7 +535,7 @@ textarea.inp{min-height:140px;padding:14px 16px;resize:vertical;line-height:1.5}
 <section id="confiance" aria-labelledby="log-h" class="row sheet" style="background: #D6E8FF">
 <div class="frame sec">
 <div class="ctr"><span class="kk">Nos clients contents</span><h2 id="log-h" class="giant" style="font-size:clamp(34px,3.6vw,52px)">Des TPE/PME, des indépendants, <span class="hlw">des gens bien.</span></h2></div>
-<div class="logos"><div class="logo">[Logo client 1]</div><div class="logo">[Logo client 2]</div><div class="logo">[Logo client 3]</div><div class="logo">[Logo client 4]</div><div class="logo">[Logo client 5]</div><div class="logo you">Votre logo ?</div></div>
+<div class="logos"><div class="logo klg"><img class="klg-sw" src="/images/logos/ebra-n.svg" alt="Ebra Events"><img class="klg-c" src="/images/logos/ebra-c.svg" alt=""></div><div class="logo klg tall"><img class="klg-sw" src="/images/logos/capnatura-n.svg" alt="Cap Natura"><img class="klg-c" src="/images/logos/capnatura-c.svg" alt=""></div><div class="logo klg"><img class="klg-sw" src="/images/logos/kaltea-n.png" alt="Kaltea"><img class="klg-c" src="/images/logos/kaltea-c.png" alt=""></div><div class="logo klg"><img class="klg-sw" src="/images/logos/suprasteam-n.png" alt="Suprasteam"><img class="klg-c" src="/images/logos/suprasteam-c.png" alt=""></div><div class="logo klg"><img class="klg-sw" src="/images/logos/supratec-n.png" alt="Supratec"><img class="klg-c" src="/images/logos/supratec-c.png" alt=""></div><div class="logo klg tall"><img class="klg-sw" src="/images/logos/optique-n.png" alt="Optique Ducret"><img class="klg-c" src="/images/logos/optique-c.png" alt=""></div><div class="logo klg"><img class="klg-n" src="/images/logos/nadiya-n.png" alt="Nadiya"></div><div class="logo you">Votre logo ?</div></div>
 </div>
 </section>
 </div>
@@ -654,7 +665,7 @@ textarea.inp{min-height:140px;padding:14px 16px;resize:vertical;line-height:1.5}
 <section id="confiance" aria-labelledby="log-h" class="row sheet" style="background: #D6E8FF">
 <div class="frame sec">
 <div class="ctr"><span class="kk">Nos clients contents</span><h2 id="log-h" class="giant" style="font-size:clamp(34px,3.6vw,52px)">Des TPE/PME, des indépendants, <span class="hlw">des gens bien.</span></h2></div>
-<div class="logos"><div class="logo">[Logo client 1]</div><div class="logo">[Logo client 2]</div><div class="logo">[Logo client 3]</div><div class="logo">[Logo client 4]</div><div class="logo">[Logo client 5]</div><div class="logo you">Votre logo ?</div></div>
+<div class="logos"><div class="logo klg"><img class="klg-sw" src="/images/logos/ebra-n.svg" alt="Ebra Events"><img class="klg-c" src="/images/logos/ebra-c.svg" alt=""></div><div class="logo klg tall"><img class="klg-sw" src="/images/logos/capnatura-n.svg" alt="Cap Natura"><img class="klg-c" src="/images/logos/capnatura-c.svg" alt=""></div><div class="logo klg"><img class="klg-sw" src="/images/logos/kaltea-n.png" alt="Kaltea"><img class="klg-c" src="/images/logos/kaltea-c.png" alt=""></div><div class="logo klg"><img class="klg-sw" src="/images/logos/suprasteam-n.png" alt="Suprasteam"><img class="klg-c" src="/images/logos/suprasteam-c.png" alt=""></div><div class="logo klg"><img class="klg-sw" src="/images/logos/supratec-n.png" alt="Supratec"><img class="klg-c" src="/images/logos/supratec-c.png" alt=""></div><div class="logo klg tall"><img class="klg-sw" src="/images/logos/optique-n.png" alt="Optique Ducret"><img class="klg-c" src="/images/logos/optique-c.png" alt=""></div><div class="logo klg"><img class="klg-n" src="/images/logos/nadiya-n.png" alt="Nadiya"></div><div class="logo you">Votre logo ?</div></div>
 </div>
 </section>
 </div>
