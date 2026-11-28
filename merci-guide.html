@@ -50,6 +50,9 @@ h1{margin:0;font-weight:800;letter-spacing:-0.05em;line-height:1.02;font-size:cl
 .next h2{margin:0 0 8px;font-size:26px;font-weight:800;letter-spacing:-0.035em}
 .next p{margin:0 0 18px;font-size:17px;font-weight:500}
 @media (max-width:1023px){.nav{display:none}main{padding:44px 20px 64px}.next{flex-direction:column;text-align:center}}
+.pied{background:#1E2A44;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.16 0 0 0 0 0.27 1.12 0 0 0 -0.665'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:220px;color:#FFFFFF;border-top:2px solid #FFFFFF;position:relative;overflow:hidden}
+.pied-in{max-width:1600px;margin:0 auto;padding:80px 40px 32px;box-sizing:border-box}
+.fl a{color:#FFFFFF;text-decoration:none;display:block;line-height:2.1;font-weight:600}.fl a:hover{color:#FFB000}
 </style>
 </head>
 <body>
@@ -77,7 +80,18 @@ h1{margin:0;font-weight:800;letter-spacing:-0.05em;line-height:1.02;font-size:cl
 </div>
 </div>
 </main>
-<footer class="ft"><span>© 2026 Kortado · Lyon · <a href="/mentions-legales">Mentions légales</a> · <a href="/confidentialite">Confidentialité</a></span><span style="color:#FFB000">FAIT AVEC BEAUCOUP DE CAFÉ</span></footer>
+<footer id="pied" class="pied">
+<div class="pied-in">
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; padding-bottom: 48px">
+<div><p style="margin: 0; font-weight: 600; color: #C9D3E3; max-width: 26ch">Agence d’acquisition Google Ads &amp; LinkedIn à Lyon.</p></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7; font-family: 'IBM Plex Mono', monospace">OFFRES</p><a href="/google-ads">Google Ads</a><a href="/linkedin">LinkedIn</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7; font-family: 'IBM Plex Mono', monospace">KORTADO</p><a href="/">Accueil</a><a href="/cas-clients">Cas clients</a><a href="/agence">L’agence</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7; font-family: 'IBM Plex Mono', monospace">CONTACT</p><a href="/contact#rdv">Réserver un appel</a><a href="mailto:contact@kortado.fr">contact@kortado.fr</a><a href="/contact">5 allée des Tilleuls, 69570 Dardilly</a></div>
+</div>
+<p aria-hidden="true" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(80px, 17vw, 250px); font-weight: 800; letter-spacing: -0.06em; line-height: .8">kortado<span style="color: #FFB000">.</span></p>
+<div style="margin-top: 32px; padding-top: 22px; border-top: 2px solid #FFFFFF; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 14px; font-weight: 600"><span>© 2026 Kortado · Lyon · <a href="/mentions-legales" style="color:inherit;display:inline;line-height:inherit;text-decoration:underline">Mentions légales</a> · <a href="/confidentialite" style="color:inherit;display:inline;line-height:inherit;text-decoration:underline">Confidentialité</a></span><span style="color: #FFB000; font-family: 'IBM Plex Mono', monospace">FAIT AVEC BEAUCOUP DE CAFÉ</span></div>
+</div>
+</footer>
 </div>
 </div>
 <template id="dc-tpl">
@@ -104,7 +118,18 @@ h1{margin:0;font-weight:800;letter-spacing:-0.05em;line-height:1.02;font-size:cl
 </div>
 </div>
 </main>
-<footer class="ft"><span>© 2026 Kortado · Lyon · <a href="/mentions-legales">Mentions légales</a> · <a href="/confidentialite">Confidentialité</a></span><span style="color:#FFB000">FAIT AVEC BEAUCOUP DE CAFÉ</span></footer>
+<footer id="pied" class="pied">
+<div class="pied-in">
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; padding-bottom: 48px">
+<div><p style="margin: 0; font-weight: 600; color: #C9D3E3; max-width: 26ch">Agence d’acquisition Google Ads &amp; LinkedIn à Lyon.</p></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7; font-family: 'IBM Plex Mono', monospace">OFFRES</p><a href="/google-ads">Google Ads</a><a href="/linkedin">LinkedIn</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7; font-family: 'IBM Plex Mono', monospace">KORTADO</p><a href="/">Accueil</a><a href="/cas-clients">Cas clients</a><a href="/agence">L’agence</a></div>
+<div><p class="mono" style="margin: 0 0 8px; font-size: 12px; color: #8FBEF7; font-family: 'IBM Plex Mono', monospace">CONTACT</p><a href="/contact#rdv">Réserver un appel</a><a href="mailto:contact@kortado.fr">contact@kortado.fr</a><a href="/contact">5 allée des Tilleuls, 69570 Dardilly</a></div>
+</div>
+<p aria-hidden="true" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(80px, 17vw, 250px); font-weight: 800; letter-spacing: -0.06em; line-height: .8">kortado<span style="color: #FFB000">.</span></p>
+<div style="margin-top: 32px; padding-top: 22px; border-top: 2px solid #FFFFFF; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 14px; font-weight: 600"><span>© 2026 Kortado · Lyon · <a href="/mentions-legales" style="color:inherit;display:inline;line-height:inherit;text-decoration:underline">Mentions légales</a> · <a href="/confidentialite" style="color:inherit;display:inline;line-height:inherit;text-decoration:underline">Confidentialité</a></span><span style="color: #FFB000; font-family: 'IBM Plex Mono', monospace">FAIT AVEC BEAUCOUP DE CAFÉ</span></div>
+</div>
+</footer>
 </div>
 </template>
 <script type="application/json" id="dc-props">{"$preview":{"width":1440,"height":1100}}</script>
