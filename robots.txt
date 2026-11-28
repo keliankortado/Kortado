@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /formulaires.html
+
+Sitemap: https://kortado.fr/sitemap.xml
