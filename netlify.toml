@@ -1,2 +1,7 @@
 [build]
   publish = "."
+
+[[headers]]
+  for = "/ressources/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
